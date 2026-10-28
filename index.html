@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دليل الضرائب المصرية</title>
+<meta name="description" content="اسأل أي سؤال عن الضرائب في مصر (دخل، قيمة مضافة، دمغة، عقارية، مشروعات صغيرة، إجراءات) واحصل على إجابة فورية مع حاسبات ضريبية. محدّث حتى أكتوبر 2026.">
+<style>
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --ink:#1b2430; --muted:#5b6675; --line:#e3e7ee;
+  --brand:#0b5d4b; --brand-ink:#ffffff; --accent:#c8932b; --soft:#e8f3ef;
+  --ok-bg:#e6f4ea; --ok-ink:#1e6b34; --warn-bg:#fff4dd; --warn-ink:#8a5a00;
+  --radius:14px; --shadow:0 1px 2px rgba(16,24,40,.06),0 4px 14px rgba(16,24,40,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10151b; --card:#171e26; --ink:#e8edf3; --muted:#9aa6b5; --line:#27313d;
+    --brand:#2fa88c; --brand-ink:#06201a; --accent:#e0b04f; --soft:#14302a;
+    --ok-bg:#12301d; --ok-ink:#7fd39a; --warn-bg:#3a2d10; --warn-ink:#f0c26a;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10151b; --card:#171e26; --ink:#e8edf3; --muted:#9aa6b5; --line:#27313d;
+  --brand:#2fa88c; --brand-ink:#06201a; --accent:#e0b04f; --soft:#14302a;
+  --ok-bg:#12301d; --ok-ink:#7fd39a; --warn-bg:#3a2d10; --warn-ink:#f0c26a; --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic","Noto Sans Arabic",Arial,sans-serif;
+  line-height:1.85;font-size:16px}
+a{color:var(--brand)}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header.top{background:var(--brand);color:var(--brand-ink);padding:22px 0 64px}
+header.top .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+header.top h1{margin:0;font-size:1.45rem;line-height:1.4}
+header.top p{margin:6px 0 0;opacity:.92;font-size:.95rem}
+.themebtn{background:rgba(255,255,255,.16);color:inherit;border:0;border-radius:10px;padding:8px 12px;cursor:pointer;font:inherit}
+.hero{margin-top:-44px}
+.searchbox{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border:1px solid var(--line)}
+.searchbox form{display:flex;gap:8px}
+.searchbox input[type=search]{flex:1;min-width:0;font:inherit;font-size:1.05rem;padding:13px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+.searchbox input[type=search]:focus{outline:2px solid var(--brand);border-color:var(--brand)}
+.btn{font:inherit;border:0;border-radius:12px;padding:12px 20px;background:var(--brand);color:var(--brand-ink);cursor:pointer;font-weight:600}
+.btn.alt{background:var(--soft);color:var(--brand)}
+.btn.small{padding:6px 12px;font-size:.88rem;border-radius:9px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{font:inherit;font-size:.9rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer}
+.chip:hover{border-color:var(--brand);color:var(--brand)}
+nav.tabs{display:flex;gap:6px;margin:20px 0 14px;overflow-x:auto;padding-bottom:4px}
+nav.tabs button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:10px;cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);font-weight:600}
+section.panel{display:none}
+section.panel.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-bottom:14px}
+.card h2,.card h3{margin:0 0 8px;line-height:1.5}
+.card h2{font-size:1.2rem}
+.badge{display:inline-block;font-size:.78rem;padding:2px 10px;border-radius:999px;font-weight:600;margin-inline-start:8px;vertical-align:middle}
+.badge.ok{background:var(--ok-bg);color:var(--ok-ink)}
+.badge.warn{background:var(--warn-bg);color:var(--warn-ink)}
+.meta{font-size:.85rem;color:var(--muted);border-top:1px dashed var(--line);margin-top:12px;padding-top:10px}
+.answer p{margin:.5em 0}
+.answer ul{padding-inline-start:22px;margin:.4em 0}
+table.t{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95rem;display:block;overflow-x:auto}
+table.t th,table.t td{border:1px solid var(--line);padding:7px 10px;text-align:right;white-space:nowrap}
+table.t th{background:var(--soft)}
+.note{background:var(--warn-bg);color:var(--warn-ink);padding:10px 12px;border-radius:10px;font-size:.9rem;margin:10px 0}
+.related{display:flex;flex-direction:column;gap:6px;margin-top:6px}
+.related button{font:inherit;text-align:right;background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:10px;cursor:pointer}
+.related button:hover{border-color:var(--brand)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.law-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;cursor:pointer}
+.law-no{font-size:.85rem;color:var(--accent);font-weight:700}
+.law-list{display:none;margin-top:10px}
+.law-list.on{display:flex;flex-direction:column;gap:6px}
+.field{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.field label{font-size:.9rem;color:var(--muted)}
+.field input,.field select{font:inherit;padding:10px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+.result{background:var(--soft);border-radius:12px;padding:12px 14px;margin-top:10px}
+.result b.big{font-size:1.25rem;color:var(--brand)}
+.kv{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding:4px 0}
+.kv:last-child{border-bottom:0}
+footer{margin:30px 0 40px;font-size:.85rem;color:var(--muted)}
+footer ul{padding-inline-start:20px}
+.empty{color:var(--muted);text-align:center;padding:10px}
+.tl{border-inline-start:3px solid var(--brand);padding-inline-start:14px;margin:0 6px 16px}
+.tl b{color:var(--brand)}
+.verdict{border-radius:12px;padding:12px 14px;margin:10px 0}
+.verdict b{display:block;font-size:1.12rem;line-height:1.6}
+.verdict .vrate{margin-top:4px;font-size:.98rem}
+.v-ex{background:var(--ok-bg);color:var(--ok-ink)}
+.v-tax{background:var(--warn-bg);color:var(--warn-ink)}
+blockquote.vtext{white-space:pre-line;margin:10px 0;padding:8px 14px;border-inline-start:4px solid var(--accent);background:var(--bg);font-size:.95rem;border-radius:8px;line-height:1.9}
+.vsrc{font-size:.9rem;color:var(--muted);margin-top:8px}
+.vrow{display:flex;justify-content:space-between;gap:10px;align-items:center;width:100%;text-align:right;font:inherit;background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:8px 12px;border-radius:10px;cursor:pointer}
+.vrow:hover{border-color:var(--brand)}
+.vrow small{color:var(--muted);white-space:normal;text-align:left;flex-shrink:1}
+.vrow span{flex:1;min-width:0}
+details.vgrp{margin:8px 0}
+details.vgrp>summary{cursor:pointer;font-weight:700;padding:6px 0}
+details.vgrp .related{margin-bottom:8px}
+@media (max-width:520px){
+  header.top h1{font-size:1.2rem}
+  .searchbox form{flex-direction:column}
+}
+@media print{header.top,.searchbox,nav.tabs,.chips,.themebtn,.btn{display:none!important} section.panel{display:block!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <h1>دليل الضرائب المصرية</h1>
+        <p>اسأل أي سؤال عن الضرائب واحصل على الإجابة فورًا · محدّث حتى أكتوبر 2026 (يشمل حزمة التسهيلات الثانية: قوانين 148–155 لسنة 2026)</p>
+      </div>
+      <button class="themebtn" id="themeBtn" type="button" aria-label="تبديل المظهر">🌓</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="searchbox">
+      <form id="qform" role="search" autocomplete="off">
+        <input type="search" id="q" placeholder="اكتب سؤالك… مثال: ضريبة بيع شقة كام؟" aria-label="اكتب سؤالك الضريبي">
+        <button class="btn" type="submit">اسأل</button>
+      </form>
+      <div class="chips" id="chips"></div>
+    </div>
+  </div>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="ask">الإجابات</button>
+    <button role="tab" aria-selected="false" data-tab="vat">فحص منتج (قيمة مضافة)</button>
+    <button role="tab" aria-selected="false" data-tab="laws">القوانين</button>
+    <button role="tab" aria-selected="false" data-tab="calc">الحاسبات</button>
+    <button role="tab" aria-selected="false" data-tab="news">آخر التحديثات</button>
+  </nav>
+
+  <section class="panel on" id="tab-ask" aria-live="polite">
+    <div id="answer"></div>
+  </section>
+
+  <section class="panel" id="tab-vat">
+    <div class="card">
+      <h2>هل المنتج أو الخدمة خاضع للقيمة المضافة؟</h2>
+      <p style="margin:.3em 0;color:var(--muted)">اكتب اسم السلعة أو الخدمة (مثال: سجائر، عيش، تاكسي، لبن أطفال، تكييف) وهتطلع المعاملة الضريبية مع نص البند والقانون المصدر.</p>
+      <form id="vform" autocomplete="off" style="display:flex;gap:8px;margin-top:8px">
+        <input type="search" id="vq" placeholder="اسم المنتج أو الخدمة…" aria-label="اسم المنتج أو الخدمة" style="flex:1;min-width:0;font:inherit;padding:11px 13px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)">
+        <button class="btn" type="submit">افحص</button>
+      </form>
+      <div class="chips" id="vchips" style="margin-top:10px"></div>
+      <div class="note" id="vasof"></div>
+    </div>
+    <div id="vatOut"></div>
+    <div class="card"><h3>تصفّح البنود</h3><div id="vbrowse"></div></div>
+    <div class="card"><h3>ملفات المصادر القانونية (PDF)</h3><p style="margin:.2em 0 .6em;color:var(--muted);font-size:.9rem">كل الملفات المرفقة كما وردت، افتحها للتأكد من النص الأصلي.</p><div class="related" id="vsources"></div></div>
+  </section>
+
+  <section class="panel" id="tab-laws">
+    <p style="color:var(--muted);margin-top:0">دليل القوانين الضريبية الرئيسية في مصر. اضغط على أي قانون لتشوف الأسئلة اللي بيغطيها.</p>
+    <div class="grid" id="lawsGrid"></div>
+  </section>
+
+  <section class="panel" id="tab-calc">
+    <div class="grid">
+      <div class="card">
+        <h3>🧮 ضريبة المرتبات (سنوية وشهرية)</h3>
+        <div class="field"><label for="c1_sal">المرتب الشهري الإجمالي (جنيه)</label><input id="c1_sal" type="number" min="0" inputmode="decimal" placeholder="مثال: 20000"></div>
+        <div class="field"><label for="c1_extra">حوافز/مكافآت سنوية خاضعة للضريبة (جنيه – اختياري)</label><input id="c1_extra" type="number" min="0" inputmode="decimal" placeholder="0"></div>
+        <div class="field"><label for="c1_ins">حصة الموظف في التأمينات الاجتماعية شهريًا (جنيه – اختياري)</label><input id="c1_ins" type="number" min="0" inputmode="decimal" placeholder="0"></div>
+        <button class="btn" id="c1_go" type="button">احسب</button>
+        <div id="c1_out"></div>
+      </div>
+
+      <div class="card">
+        <h3>🧾 القيمة المضافة</h3>
+        <div class="field"><label for="c2_amt">المبلغ (جنيه)</label><input id="c2_amt" type="number" min="0" inputmode="decimal" placeholder="1000"></div>
+        <div class="field"><label for="c2_rate">النسبة</label>
+          <select id="c2_rate"><option value="14">14% (السعر العام)</option><option value="5">5% (معدات/أجهزة طبية مؤهلة)</option><option value="10">10% (جدول)</option><option value="0">0%</option></select></div>
+        <div class="field"><label for="c2_mode">نوع الحساب</label>
+          <select id="c2_mode"><option value="add">المبلغ قبل الضريبة (أضف الضريبة)</option><option value="extract">المبلغ شامل الضريبة (استخرج الضريبة)</option></select></div>
+        <button class="btn" id="c2_go" type="button">احسب</button>
+        <div id="c2_out"></div>
+      </div>
+
+      <div class="card">
+        <h3>🏠 ضريبة التصرفات العقارية (2.5%)</h3>
+        <div class="field"><label for="c3_price">ثمن البيع (جنيه)</label><input id="c3_price" type="number" min="0" inputmode="decimal" placeholder="3000000"></div>
+        <button class="btn" id="c3_go" type="button">احسب</button>
+        <div id="c3_out"></div>
+      </div>
+
+      <div class="card">
+        <h3>🏪 ضريبة المشروعات الصغيرة (قانون 152/2020)</h3>
+        <div class="field"><label for="c4_turn">رقم الأعمال السنوي (جنيه)</label><input id="c4_turn" type="number" min="0" inputmode="decimal" placeholder="1500000"></div>
+        <button class="btn" id="c4_go" type="button">احسب</button>
+        <div id="c4_out"></div>
+      </div>
+
+      <div class="card">
+        <h3>🏢 ضريبة الشركات وتوزيعات الأرباح</h3>
+        <div class="field"><label for="c5_profit">صافي الربح الخاضع للضريبة (جنيه)</label><input id="c5_profit" type="number" min="0" inputmode="decimal" placeholder="5000000"></div>
+        <div class="field"><label for="c5_listed">نوع الشركة (لضريبة التوزيعات)</label>
+          <select id="c5_listed"><option value="10">غير مقيدة بالبورصة (توزيعات 10%)</option><option value="5">مقيدة بالبورصة (توزيعات 5%)</option></select></div>
+        <button class="btn" id="c5_go" type="button">احسب</button>
+        <div id="c5_out"></div>
+      </div>
+
+      <div class="card">
+        <h3>🏘️ الضريبة العقارية (مباني)</h3>
+        <div class="field"><label for="c6_rent">القيمة الإيجارية السنوية المقدّرة (جنيه)</label><input id="c6_rent" type="number" min="0" inputmode="decimal" placeholder="150000"></div>
+        <div class="field"><label for="c6_type">نوع الوحدة</label>
+          <select id="c6_type"><option value="main">سكن خاص رئيسي (وحدة واحدة)</option><option value="res">سكني آخر</option><option value="non">غير سكني (تجاري/إداري)</option></select></div>
+        <button class="btn" id="c6_go" type="button">احسب</button>
+        <div id="c6_out"></div>
+      </div>
+    </div>
+    <p class="note">الحاسبات للتقدير والتوعية فقط، ولا تغني عن مراجعة محاسب قانوني أو مصلحة الضرائب.</p>
+  </section>
+
+  <section class="panel" id="tab-news">
+    <div class="card">
+      <h2>الحزمة الثانية من التسهيلات الضريبية (يوليو 2026)</h2>
+      <p>نُشرت قوانين <b>148 إلى 154 لسنة 2026</b> في الجريدة الرسمية يوم 28 يوليو 2026 وبدأ العمل بها يوم 29 يوليو 2026، ونُشر القانون <b>155 لسنة 2026</b> يوم 2 أغسطس 2026 وبدأ العمل به يوم 3 أغسطس. وصدر تصويب في العدد 32 مكرر بتاريخ 8 أغسطس 2026. بعض الأحكام ينتظر لائحة تنفيذية أو تعليمات.</p>
+      <table class="t"><tr><th>القانون</th><th>أهم ما جاء فيه</th></tr>
+        <tr><td>149 لسنة 2026</td><td>القيمة المضافة: سعر 5% للمعدات والأجهزة الطبية، نظام إيقاف الضريبة، رد أسرع، إعفاءات جديدة، ضريبة على إيجار المباني التجارية، ضريبة جدول على الغاز الطبيعي</td></tr>
+        <tr><td>150 لسنة 2026</td><td>الإجراءات الضريبية الموحد: بطاقة ضريبية مؤقتة 8 شهور، تأكيد إلزام مسك الدفاتر</td></tr>
+        <tr><td>151 لسنة 2026</td><td>ضريبة الدخل: التصرفات العقارية، الأرباح الرأسمالية، الرسملة الضعيفة، خصم 15% لقيد البورصة، الديون المعدومة، تسوية مبسطة للمنشآت الصغيرة</td></tr>
+        <tr><td>152 لسنة 2026</td><td>مد العمل بقانون تسوية المنازعات الضريبية (79/2016) حتى 31 ديسمبر 2026</td></tr>
+        <tr><td>148 / 153 / 154 / 155</td><td>تشمل: دمغة تعاملات البورصة، رسم تنمية الموارد المالية (مغادرة البلاد وإنتاج الأسمنت)، الإسهام الصحي الشامل، تحويلات من أرباح الشركات المملوكة للدولة</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h2>خط زمني لأهم التعديلات</h2>
+      <div class="tl"><b>فبراير 2024</b><br>قانون 7 لسنة 2024: رفع الإعفاء الشخصي إلى 20,000 جنيه وإعادة هيكلة شرائح الدخل (حتى 27.5%).</div>
+      <div class="tl"><b>فبراير 2025</b><br>قانون 7 لسنة 2025: وضع سقف لمقابل التأخير والضريبة الإضافية، وإتاحة تسويات لبعض المخالفات (تعديل قانون 206/2020).</div>
+      <div class="tl"><b>فبراير – أبريل 2026</b><br>تعديل قانون الضريبة العقارية: رفع إعفاء السكن الخاص الرئيسي إلى 100 ألف جنيه صافي قيمة إيجارية سنوية.</div>
+      <div class="tl"><b>مارس 2026</b><br>وزير المالية يعلن الحزمة الثانية (33 إجراءً تشريعيًا وتنفيذيًا) ومد قانون تسوية المنازعات.</div>
+      <div class="tl"><b>28 يوليو 2026</b><br>نشر قوانين 148–154 لسنة 2026، والعمل بها من 29 يوليو.</div>
+      <div class="tl"><b>31 ديسمبر 2026</b><br>آخر موعد للاستفادة من تسوية المنازعات الضريبية (قانون 79/2016 بعد التجديد).</div>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>تنبيه:</b> المحتوى معلوماتي عام وليس استشارة ضريبية أو قانونية. الأسعار والأحكام تتغير، والتطبيق الفعلي يعتمد على حالتك والنصوص الرسمية واللوائح التنفيذية وتعليمات مصلحة الضرائب. الإجابات المعلّمة بـ ⚠ تحتاج مراجعة قبل الاعتماد عليها. الصفحة ثابتة (بدون ذكاء اصطناعي ولا اتصال بالإنترنت) والبحث فيها يعتمد على قاعدة معرفة مكتوبة داخل الملف.</p>
+    <details>
+      <summary>المصادر القانونية المرفقة لفحص القيمة المضافة</summary>
+      <ul id="footSrc"></ul>
+    </details>
+    <details>
+      <summary>المصادر المستخدمة في إعداد المحتوى</summary>
+      <ul>
+        <li><a href="https://www.pwc.com/m1/en/services/tax/middle-east-tax-news-alerts/2026/egypt-second-tax-facilitation-package.html" target="_blank" rel="noopener">PwC – الحزمة الثانية (قوانين 148–155 لسنة 2026)</a></li>
+        <li><a href="https://global.ecovis.com/egypt-issues-sweeping-amendments-to-vat-income-tax-and-tax-procedures-legislation/" target="_blank" rel="noopener">Ecovis – تعديلات القيمة المضافة والدخل والإجراءات 2026</a></li>
+        <li><a href="https://taxnews.ey.com/news/2026-1750-egypt-announces-second-tax-facilitation-package" target="_blank" rel="noopener">EY – الحزمة الثانية</a></li>
+        <li><a href="https://english.ahram.org.eg/News/571441.aspx" target="_blank" rel="noopener">الأهرام – تعديلات القيمة المضافة</a></li>
+        <li><a href="https://eg.andersen.com/personal-income-tax/" target="_blank" rel="noopener">Andersen – الضريبة على دخل الأفراد 2026</a></li>
+        <li><a href="https://taxsummaries.pwc.com/egypt/individual/taxes-on-personal-income" target="_blank" rel="noopener">PwC Tax Summaries – شرائح الدخل</a></li>
+        <li><a href="https://www.deloitte.com/middle-east/en/services/tax/perspectives/amendment-to-tax-brackets-and-annual-personal-exemption.html" target="_blank" rel="noopener">Deloitte – قانون 7 لسنة 2024</a></li>
+        <li><a href="https://eg.andersen.com/withholding-taxes-in-egypt/" target="_blank" rel="noopener">Andersen – الخصم من المنبع</a></li>
+        <li><a href="https://www.mondaq.com/capital-gains-tax/1785186/corporate-tax-in-egypt-in-2026" target="_blank" rel="noopener">Andersen/Mondaq – ضريبة الشركات 2026</a></li>
+        <li><a href="https://www.masrawy.com/news/news_economy/details/2023/12/6/2506082/" target="_blank" rel="noopener">مصراوي – شرائح قانون المشروعات الصغيرة 152/2020</a></li>
+        <li><a href="https://www.youm7.com/7323720" target="_blank" rel="noopener">اليوم السابع – تعديل الضريبة على العقارات المبنية</a></li>
+        <li><a href="https://www.albawabhnews.com/4599774" target="_blank" rel="noopener">البوابة – الفاتورة الإلكترونية والمادتان 35 و72</a></li>
+        <li><a href="https://taxnews.ey.com/news/2025-0570" target="_blank" rel="noopener">EY – قانون 7 لسنة 2025</a></li>
+      </ul>
+    </details>
+  </footer>
+</main>
+
+<script>
+/* ============================================================
+   قاعدة المعرفة – كل مدخل: id, law, title, أسئلة, كلمات مفتاحية, إجابة HTML, v (1 موثّق / 0 راجع), مصدر
+   ============================================================ */
+var LAWS = [
+  {k:'income', no:'91 لسنة 2005', name:'قانون الضريبة على الدخل', desc:'ضريبة الأفراد والشركات، الأرباح الرأسمالية، التوزيعات. عُدّل بقوانين 30/2023 و7/2024 و151/2026 وغيرها.'},
+  {k:'vat', no:'67 لسنة 2016', name:'قانون الضريبة على القيمة المضافة', desc:'السعر العام 14% وضريبة الجدول والإعفاءات. عدّله القانون 149 لسنة 2026.'},
+  {k:'proc', no:'206 لسنة 2020', name:'قانون الإجراءات الضريبية الموحد', desc:'التسجيل والإقرارات والفاتورة الإلكترونية والفحص والغرامات. عدّله 7/2025 و150/2026.'},
+  {k:'sme', no:'152 لسنة 2020', name:'قانون تنمية المشروعات المتوسطة والصغيرة ومتناهية الصغر', desc:'نظام ضريبي مبسط (قطعي/نسبي) وحوافز لمن يقل رقم أعماله عن 10 ملايين.'},
+  {k:'stamp', no:'111 لسنة 1980', name:'قانون ضريبة الدمغة', desc:'ضريبة الدمغة النسبية والقطعية، ودمغة تعاملات البورصة (عُدّلت في حزمة 2026).'},
+  {k:'realty', no:'196 لسنة 2008', name:'قانون الضريبة على العقارات المبنية', desc:'الضريبة السنوية على المباني (10% من صافي القيمة الإيجارية) وإعفاء السكن الخاص (عُدّل 2026).'},
+  {k:'dispute', no:'79 لسنة 2016', name:'قانون إنهاء المنازعات الضريبية', desc:'تسوية المنازعات الضريبية القائمة. مُدّ العمل به حتى 31/12/2026 بالقانون 152/2026.'},
+  {k:'pkg', no:'148 – 155 لسنة 2026', name:'حزمة التسهيلات الضريبية الثانية', desc:'ثمانية قوانين صدرت بين 28 يوليو و2 أغسطس 2026 تمس القيمة المضافة والدخل والإجراءات والدمغة والرسوم.'},
+  {k:'other', no:'متنوعة', name:'ضرائب ورسوم أخرى', desc:'رسم تنمية الموارد المالية، الإسهام الصحي الشامل، ضريبة الملاهي، الأطيان الزراعية، الجمارك، التأمينات.'}
+];
+
+var KB = [];
+function E(id, law, title, qs, kws, html, v, src){ KB.push({id:id,law:law,title:title,qs:qs,kws:kws,html:html,v:v,src:src||''}); }
+
+/* ---------------- ضريبة الدخل – أفراد ---------------- */
+E('inc-brackets','income','شرائح ضريبة الدخل على الأفراد (المرتبات والمهن والنشاط)',
+ ['ايه شرائح ضريبة الدخل','الضريبة على المرتب كام في المية','اعلى شريحة ضريبية','نسبة ضريبة الدخل على الافراد','شرايح الضرايب على المرتبات','ضريبة كسب العمل'],
+ ['شرائح','شريحة','دخل','مرتب','مرتبات','راتب','افراد','نسبه','27.5','25','22.5','تصاعديه','اعفاء','ضريبه المرتبات'],
+ '<p>ضريبة دخل الأفراد (مرتبات – مهن حرة – نشاط تجاري وصناعي – إيجارات) بتتحسب بشرائح تصاعدية من <b>0% لحد 27.5%</b> على <b>صافي الدخل السنوي</b> بعد خصم الإعفاء الشخصي (20,000 جنيه) والتأمينات.</p>'+
+ '<table class="t"><tr><th>شريحة صافي الدخل السنوي (لمن لا يتجاوز دخله 600 ألف)</th><th>المعدل</th></tr>'+
+ '<tr><td>حتى 40,000</td><td>0%</td></tr><tr><td>من 40,000 إلى 55,000</td><td>10%</td></tr><tr><td>من 55,000 إلى 70,000</td><td>15%</td></tr>'+
+ '<tr><td>من 70,000 إلى 200,000</td><td>20%</td></tr><tr><td>من 200,000 إلى 400,000</td><td>22.5%</td></tr>'+
+ '<tr><td>من 400,000 إلى 1,200,000</td><td>25%</td></tr><tr><td>أكثر من 1,200,000</td><td>27.5%</td></tr></table>'+
+ '<p><b>لو صافي دخلك زاد عن 600 ألف:</b> الشرائح الدنيا بتتشال تدريجيًا بحسب إجمالي الدخل، فالضريبة تتحسب كلها على الجدول المناسب لمستوى دخلك:</p>'+
+ '<table class="t"><tr><th>صافي الدخل السنوي</th><th>أول شريحة تبدأ بها</th><th>شريحة 25% تمتد حتى</th></tr>'+
+ '<tr><td>حتى 600,000</td><td>0% حتى 40,000</td><td>600,000</td></tr>'+
+ '<tr><td>600,000 – 700,000</td><td>10% من أول جنيه حتى 55,000</td><td>700,000</td></tr>'+
+ '<tr><td>700,000 – 800,000</td><td>15% من أول جنيه حتى 70,000</td><td>800,000</td></tr>'+
+ '<tr><td>800,000 – 900,000</td><td>20% من أول جنيه حتى 200,000</td><td>900,000</td></tr>'+
+ '<tr><td>900,000 – 1,200,000</td><td>22.5% من أول جنيه حتى 400,000</td><td>1,200,000</td></tr>'+
+ '<tr><td>أكثر من 1,200,000</td><td>25% من أول جنيه حتى 1,200,000</td><td>ثم 27.5% على الزيادة</td></tr></table>'+
+ '<p>جرّب <b>حاسبة المرتبات</b> في تبويب «الحاسبات» لحساب ضريبتك.</p>',
+ 1,'قانون 91/2005 المعدل بقانون 7/2024 – Andersen, PwC Tax Summaries, Deloitte');
+
+E('inc-exemption','income','الإعفاء الشخصي السنوي',
+ ['كام الاعفاء الشخصي','حد الاعفاء من ضريبة الدخل','الاعفاء الضريبي للموظف','الاعفاء الشخصي 20000'],
+ ['اعفاء','شخصي','20000','20 الف','حد الاعفاء','7 لسنة 2024'],
+ '<p>الإعفاء الشخصي السنوي للممول (مقيم أو غير مقيم) <b>20,000 جنيه</b>، بعد ما كان 15,000 جنيه. اترفع بالقانون <b>7 لسنة 2024</b> وسرى على المرتبات من مارس 2024، وعلى باقي الأنشطة من الفترة الضريبية التي تنتهي بعد صدور القانون.</p>'+
+ '<p>وكمان الشريحة صفر% اترفعت لـ <b>40,000 جنيه</b> سنويًا (بعد الإعفاء الشخصي).</p>',
+ 1,'Deloitte – قانون 7/2024');
+
+E('inc-salary-how','income','إزاي بتتحسب ضريبة المرتب وبتتخصم؟',
+ ['ازاي بتتحسب ضريبة المرتب','ضريبة كسب العمل بتتخصم ازاي','كام الضريبة على مرتب 20000','الضريبة الشهرية على المرتب','حساب ضريبة المرتبات'],
+ ['حساب','مرتب','شهري','تخصم','تحت حساب','صاحب العمل','كسب عمل','مثال'],
+ '<p>صاحب العمل بيخصم الضريبة <b>شهريًا</b> تحت حساب الضريبة السنوية ويورّدها لمصلحة الضرائب. الحساب بيتم على أساس سنوي:</p>'+
+ '<ul><li>الدخل السنوي = المرتب الأساسي والبدلات والحوافز الخاضعة (×12 + المكافآت)</li>'+
+ '<li>اطرح حصة الموظف في التأمينات الاجتماعية</li><li>اطرح الإعفاء الشخصي 20,000 جنيه</li><li>طبّق الشرائح على الصافي</li></ul>'+
+ '<p><b>مثال تقريبي:</b> مرتب 20,000 جنيه شهريًا بدون تأمينات ≈ صافي سنوي 220,000 جنيه ← ضريبة سنوية حوالي <b>34,250 جنيه</b> (حوالي 2,854 جنيه شهريًا). وجود حصة تأمينات بيقلل الرقم. استخدم الحاسبة للأرقام الدقيقة لحالتك.</p>',
+ 1,'قانون 91/2005 – حساب توضيحي');
+
+E('inc-deadline','income','موعد تقديم الإقرار الضريبي للأفراد',
+ ['امتى اقدم الاقرار الضريبي','موعد الاقرار الضريبي للافراد','اخر ميعاد للاقرار الضريبي 31 مارس','ميعاد تقديم اقرار الدخل'],
+ ['اقرار','موعد','ميعاد','31 مارس','تقديم','سنوي','افراد','اخر موعد'],
+ '<p>الإقرار الضريبي السنوي للأفراد (عن السنة الضريبية السابقة) موعده عادةً <b>31 مارس</b> من كل عام. التأخير بيعرّض للغرامات ومقابل التأخير. صاحب المرتب الوحيد اللي ضريبته اتخصمت من المنبع غالبًا مش بيحتاج إقرار منفصل، لكن المسؤولية النهائية على الممول.</p>',
+ 1,'Andersen – الضريبة على دخل الأفراد 2026');
+
+E('inc-exempt-items','income','الدخول المعفاة من ضريبة الدخل على الأفراد',
+ ['ايه الدخول المعفاة من الضريبة','هل المعاش عليه ضريبة','مكافاة نهاية الخدمة عليها ضريبة','البدلات المعفاة'],
+ ['معفى','معاش','نهاية الخدمة','بدلات','اعفاء'],
+ '<p>من الدخول المعفاة: <b>المعاشات</b> و<b>مكافآت نهاية الخدمة</b> وبعض البدلات المحددة بالقانون. التفاصيل (الشروط والحدود) في المادة 7 من قانون 91/2005، فراجع النص أو محاسبك لحالتك.</p>',
+ 1,'Andersen – الضريبة على دخل الأفراد 2026');
+
+E('inc-professionals','income','الضريبة على أصحاب المهن الحرة والنشاط التجاري (الأفراد)',
+ ['ضريبة المهن الحرة','الضريبة على الدكتور والمحامي','ضريبة النشاط التجاري للافراد','اشتغل حر والضريبة عليا ازاي','ضريبة المهن غير التجارية'],
+ ['مهن حره','مهن غير تجاريه','حر','فريلانس','نشاط تجاري','صناعي','محامي','طبيب','اتعاب'],
+ '<p>دخل المهن الحرة والنشاط التجاري والصناعي للأفراد بيخضع لنفس <b>الشرائح التصاعدية</b> (0–27.5%) بعد الإعفاء الشخصي، على أساس صافي الربح السنوي المحدد بالدفاتر والإقرار. وفي بعض الأنشطة بيتم خصم مبالغ تحت حساب الضريبة من المنبع.</p>'+
+ '<p>لو رقم أعمالك أقل من 10 ملايين جنيه سنويًا، ممكن تختار نظام <b>قانون 152 لسنة 2020</b> المبسط (ضريبة قطعية أو نسبية بدون دفاتر) بدل قانون الدخل. شوف سؤال «ضريبة المشروعات الصغيرة».</p>',
+ 1,'Andersen – الضريبة على دخل الأفراد 2026؛ مصلحة الضرائب (قانون 152/2020)');
+
+E('inc-rental','income','الضريبة على دخل الإيجارات للأفراد',
+ ['ضريبة ايراد العقارات للافراد','الضريبة على ايجار الشقة المؤجرة','ضريبة الايجارات على المالك','ضريبة الدخل من تأجير عقار'],
+ ['ايجار','ايجارات','تاجير','ايراد عقار','مالك','مؤجر','خصم 50'],
+ '<p>دخل تأجير العقارات للأفراد بيتحدد بعد خصم نسبة محددة من القيمة الإيجارية الفعلية، وبعدها بتخضع للشرائح التصاعدية العادية. المعروف أن النسبة <b>50% للمباني السكنية و30% لغير السكنية</b>.</p>'+
+ '<div class="note">النسب المحددة بالضبط تحتاج مراجعة النص الحالي للمادة المختصة بقانون 91/2005 قبل الاعتماد عليها.</div>',
+ 0,'Andersen (المبدأ) – النسب من المعرفة العامة');
+
+E('inc-nonresident','income','ضريبة غير المقيمين على الدخل في مصر',
+ ['الضريبة على الاجنبي في مصر','غير المقيم بيدفع ضريبة ولا لا','ضريبة الدخل على الاجانب','مصري مغترب وضريبة'],
+ ['غير مقيم','اجنبي','مغترب','اقامه','مصدر مصري'],
+ '<p>غير المقيمين بيخضعوا للضريبة على الدخل <b>المحقق من مصادر مصرية</b> (زي شغل منفذ في مصر أو خدمات لجهات مصرية) بنفس الشرائح (0–27.5%) ونفس الإعفاء الشخصي 20,000 جنيه، حتى لو المرتب بيتدفع بره مصر. المقيمون بيخضعوا على الدخل في مصر والخارج لو مركز نشاطهم الرئيسي في مصر.</p>',
+ 1,'PwC Tax Summaries – Egypt Individual; Andersen');
+
+E('inc-social','other','التأمينات الاجتماعية: نسب الموظف وصاحب العمل',
+ ['نسبة التأمينات الاجتماعية','كام بيتخصم تأمينات من المرتب','حصة صاحب العمل في التأمينات','التأمينات الاجتماعية 11%'],
+ ['تامينات','تامين اجتماعي','11','18.75','9','12','اجر تاميني','حصه الموظف'],
+ '<p>اشتراكات التأمينات الاجتماعية: حصة العامل حوالي <b>11%</b> وحصة صاحب العمل حوالي <b>18.75%</b> من الأجر التأميني. تأمين الشيخوخة والعجز والوفاة 21% منها (9% على العامل و12% على صاحب العمل). الأجر التأميني له حد أدنى وحد أقصى بيتعدّلوا سنويًا.</p>'+
+ '<p>حصة الموظف من التأمينات <b>بتتخصم من وعاء ضريبة المرتبات</b> قبل حساب الضريبة. الأرقام الحالية للحد الأدنى والأقصى لازم تتراجع من الهيئة القومية للتأمين الاجتماعي.</p>',
+ 1,'Andersen; TradingEconomics (النسب الإجمالية)');
+
+/* ---------------- ضريبة الدخل – شركات ---------------- */
+E('corp-rate','income','سعر ضريبة الشركات (الأرباح التجارية والصناعية)',
+ ['ضريبة الشركات كام','سعر الضريبة على ارباح الشركات','ضريبة الدخل على الشركات 22.5','نسبة الضريبة على الشخص الاعتباري'],
+ ['شركات','شركه','ارباح','22.5','اشخاص اعتباريه','ضريبه الشركات','ضريبه ارباح'],
+ '<p>السعر العام لضريبة الشركات (الأشخاص الاعتبارية) <b>22.5%</b> من صافي الأرباح. وبيخضع بنفس السعر: الفوائد والإيجارات والإتاوات والدخل الأجنبي للشركات المقيمة (مع خصم الضريبة الأجنبية المسددة).</p>'+
+ '<p>المعدلات الخاصة (ذكرتها معلومات عامة): أنشطة البترول والغاز ≈ 40.55%، قناة السويس والبنك المركزي ≈ 40% — <span class="badge warn">⚠ راجع</span></p>',
+ 1,'Andersen/Mondaq – Corporate Tax in Egypt 2026؛ PwC');
+
+E('corp-dividends','income','ضريبة توزيعات الأرباح',
+ ['ضريبة الارباح الموزعة','ضريبة توزيعات الاسهم','كام ضريبة الكوبون','ضريبة الارباح على المساهمين','ضريبة التوزيعات 10% و5%'],
+ ['توزيعات','ارباح موزعه','كوبون','اسهم','مساهم','ارباح الاسهم','10','5'],
+ '<ul><li><b>10%</b> على توزيعات الشركات غير المقيدة بالبورصة.</li><li><b>5%</b> على توزيعات الأسهم المقيدة بالبورصة المصرية.</li><li>التوزيعات بين شركات مقيمة لا تُضاف للوعاء بصفة عامة (مع شروط ملكية).</li><li>توزيعات شركة الشخص الواحد من المشروعات الصغيرة (قانون 152/2020) معفاة لو الشريك شخص طبيعي.</li></ul>'+
+ '<p>الضريبة بتتخصم من المنبع عند التوزيع. المعاهدات الضريبية بتقلل المعدل لغير المقيمين.</p>',
+ 1,'Andersen؛ PwC Tax Summaries؛ Ecovis؛ وزارة المالية (قانون 152/2020)');
+
+E('corp-capgains','income','ضريبة الأرباح الرأسمالية (أسهم وحصص)',
+ ['ضريبة الارباح الرأسمالية','ضريبة بيع الاسهم','ضريبة بيع حصص الشركات','الضريبة على ارباح البورصة','ضريبة الدمغة بدل الارباح الرأسمالية','ضريبة الارباح الراسمالية للاسهم غير المقيدة'],
+ ['ارباح رأسماليه','ارباح راسماليه','بيع اسهم','بورصه','حصص','غير مقيده','مقيده','رأسمالي','22.5','10'],
+ '<ul><li><b>الأسهم/الحصص غير المقيدة:</b> 22.5% على الأرباح الرأسمالية (فرق سعر البيع والتكلفة). غير المقيم البائع يقدم تقدير ذاتي ويسدد خلال <b>60 يومًا</b> من الصفقة. وإذا كان البيع بالقيمة العادلة وفترة الاحتفاظ أكثر من 3 سنوات، تُعدّل التكلفة بسعر الائتمان والخصم المعلن من البنك المركزي.</li>'+
+ '<li><b>الأسهم المقيدة بالبورصة:</b> الاتجاه في الحزمة الثانية 2026 هو <b>ضريبة الدمغة</b> على تعاملات البورصة بدل ضريبة الأرباح الرأسمالية. وضريبة الأرباح الرأسمالية غير المسددة عن عمليات البيع من 16 يونيو 2023 حتى تاريخ العمل بالقانون الجديد <b>اتلغت</b>.</li>'+
+ '<li><b>الأسهم الأجنبية:</b> 22.5% مع خصم الضريبة الأجنبية المسددة.</li>'+
+ '<li>غير المقيمين: أرباح أذون الخزانة معفاة.</li></ul>'+
+ '<div class="note">معدل دمغة البورصة بعد تعديلات 2026 لم أتحقق منه، وكان 1.5 في الألف قبل التعديل. راجع نص القانون.</div>',
+ 1,'PwC Tax Summaries؛ Ecovis (قانون 151/2026)؛ العربية بيزنس');
+
+E('corp-participation','income','إعفاء توزيعات الشركات المقيدة بين الشركات (منع الازدواج الضريبي)',
+ ['ضريبة توزيعات الشركة الام والتابعة','الازدواج الضريبي للتوزيعات','توزيعات شركة من شركة اخرى هل عليها ضريبة','participation exemption'],
+ ['ازدواج','شركه ام','شركه تابعه','توزيعات بين الشركات','25%','سنتين','اعفاء المشاركه'],
+ '<p>الأصل أن توزيعات شركة مقيمة من شركة مقيمة <b>لا تُضاف للوعاء الخاضع</b>، وكان القانون يشترط ملكية أكثر من 25% لمدة سنتين على الأقل، مع إضافة 10% فقط من التوزيعات للوعاء في صورة قديمة. وزارة المالية أعلنت في الحزمة الثانية إنهاء الازدواج الضريبي على توزيعات الشركات الأم والتابعة، وقانون 151/2026 عدّل أحكام «الإعفاء»، فراجع النص النهائي لتفاصيل الشروط.</p>',
+ 1,'PwC Tax Summaries؛ Business Today Egypt (مارس 2026)؛ Ecovis');
+
+E('corp-ipo','income','حافز القيد في البورصة: خصم 15% من الضريبة',
+ ['حافز الطرح في البورصة','ائتمان ضريبي 15% للقيد','ميزة ضريبية للشركات اللي بتدخل البورصة','خصم ضريبي للطروحات العامة'],
+ ['قيد','طرح عام','بورصه','ائتمان ضريبي','15%','50 مليار','ipo','تخفيض'],
+ '<p>الشركة التي تقيد أسهمها في البورصة بنشرة اكتتاب معتمدة تحصل على <b>خصم 15% من ضريبة الشركات المستحقة لمدة 3 سنوات</b> من القيد، بشروط: القيمة السوقية عند القيد لا تقل عن <b>50 مليار جنيه</b>، ونسبة الأسهم حرة التداول 20% على الأقل (أو ما قيمته 10 مليارات جنيه). يُمنح مرة واحدة للشركة ولا يُجمع مع حوافز أخرى.</p>',
+ 1,'Ecovis – قانون 151/2026');
+
+E('corp-thincap','income','قواعد الرسملة الضعيفة (خصم الفوائد)',
+ ['الرسملة الضعيفة','خصم فوائد القروض من الوعاء الضريبي','thin capitalization مصر','نسبة المديونية الى حقوق الملكية'],
+ ['رسمله ضعيفه','فوائد','قروض','حقوق الملكيه','مرتين','4 مرات','مشروعات قوميه'],
+ '<p>خصم فوائد القروض من أطراف مرتبطة بيتقيد لو المديونية زادت عن <b>ضعف متوسط حقوق الملكية</b>. القانون 151/2026 أضاف حدًا أعلى <b>4 أضعاف</b> للشركات الممولة لمشروعات بنية تحتية قومية مصنفة، بشروط منها أن يكون المقرض طرفًا غير مرتبط ومساهمة لا تقل عن 25% في المشروع. البنوك وشركات التأمين والتمويل المرخصة خارج هذه القواعد.</p>',
+ 1,'Ecovis؛ PwC (قانون 151/2026)');
+
+E('corp-baddebt','income','شطب الديون المعدومة وخصمها ضريبيًا',
+ ['شطب الديون المعدومة','دين معدوم وضريبة','هل اقدر اخصم الدين المعدوم','ديون معدومة 10000 جنيه'],
+ ['ديون معدومه','دين معدوم','شطب','عملاء','10000','1%'],
+ '<p>القانون 151/2026 سهّل شطب الديون المعدومة: الديون <b>حتى 10,000 جنيه</b> تُشطب دون إجراءات تحصيل رسمية بحد أقصى <b>1%</b> من رصيد المدينين في آخر السنة. الديون الأكبر تحتاج إثبات خطوات جدية للتحصيل (أمر أداء أو حكم أول درجة أو دعوى إفلاس).</p>',
+ 1,'Ecovis – قانون 151/2026');
+
+E('corp-health','pkg','الإسهام الصحي الشامل (0.25% من الإيرادات)',
+ ['الاسهام الصحي الشامل','التأمين الصحي الشامل الشركات 0.25','مساهمة الشركات في التأمين الصحي','ضريبة التأمين الصحي الشامل على الايرادات'],
+ ['اسهام','تامين صحي','شامل','0.25','ايرادات','مصروف واجب الخصم','مساهمه تكافليه'],
+ '<p>الشركات العاملة في مصر بتسدد <b>0.25%</b> من إجمالي الإيرادات السنوية كإسهام في منظومة التأمين الصحي الشامل. حزمة 2026 سمحت بمعاملته <b>مصروفًا واجب الخصم</b> عند حساب ضريبة الشركات (وحدات صناديق الاستثمار مستثناة).</p>',
+ 1,'EY – الحزمة الثانية 2026');
+
+E('wht-nonres','income','الخصم من المنبع على المدفوعات لغير المقيمين',
+ ['ضريبة الخصم من المنبع على غير المقيمين','ضريبة الاتاوات والخدمات للاجنبي','ضريبة الفوائد لغير المقيم','withholding tax مصر'],
+ ['خصم من المنبع','منبع','غير مقيم','اتاوه','اتاوات','خدمات','فوائد','20','معاهده','اتفاقيه ازدواج'],
+ '<ul><li>الإتاوات والخدمات لغير المقيمين: <b>20%</b>.</li><li>الفوائد لغير المقيمين: <b>20%</b> (مع استثناءات للقروض والأوراق المالية المعفاة).</li><li>توزيعات الأسهم غير المقيدة لغير المقيمين: <b>10%</b>.</li></ul>'+
+ '<p>مصر وقّعت اتفاقيات تجنب ازدواج ضريبي مع أكثر من 50 دولة بتقلل المعدلات، لكن التطبيق غير تلقائي ولازم إجراءات إثبات الإقامة. الضريبة المخصومة تُسدد لمصلحة الضرائب في اليوم التالي للخصم، وهي دفعة تحت حساب الضريبة وليست تكلفة إضافية.</p>',
+ 1,'Andersen؛ PwC Tax Summaries – Withholding taxes');
+
+E('wht-domestic','income','الخصم والتحصيل تحت حساب الضريبة بين الشركات (قرار 405 لسنة 2018)',
+ ['الخصم والاضافة','نسب الخصم تحت حساب الضريبة','شركة بتخصم من المورد كام في المية','خصم 1% و3% و5% من المقاول','ضريبة الخصم والتحصيل'],
+ ['خصم واضافه','خصم وتحصيل','تحت حساب','405','موردين','مقاولين','1%','3%','5%','دفعات مقدمه','خصم منبع'],
+ '<p>الجهات المخاطبة بنظام الخصم والتحصيل بتخصم نسبًا من مدفوعاتها للممولين (موردين، مقاولين، خدمات…) وتورّدها للمصلحة <b>تحت حساب الضريبة</b>. نسب مذكورة في مصدر غير رسمي: <b>1%</b> للتوريدات، <b>3%</b> للمصنعيات والعمالة، <b>5%</b> للخدمات والاستشارات. الممول المشترك في نظام الدفعات المقدمة لا يُخصم منه.</p>'+
+ '<div class="note">النسب الرسمية الحالية والاستثناءات في قرار وزير المالية 405 لسنة 2018 وتعديلاته. راجع القرار قبل التطبيق.</div>',
+ 0,'LinkedIn (غير رسمي) – قرار 405/2018');
+
+E('inc-realestate-disposal','income','ضريبة التصرفات العقارية (بيع شقة / أرض / عقار)',
+ ['ضريبة بيع شقة كام','ضريبة التصرفات العقارية 2.5','ضريبة بيع ارض','ضريبة العوائد على العقارات','ضريبة بيع العقار على البائع','اعفاء بيع الشقة بين الاقارب'],
+ ['تصرفات عقاريه','بيع','شقه','عقار','ارض','2.5','عوائد','وراثه','ورثه','اقارب','تسجيل','شهر عقاري'],
+ '<p>ضريبة التصرفات العقارية <b>2.5%</b> من إجمالي ثمن البيع (بدون خصم تكلفة) على بيع العقارات المبنية والأراضي داخل كردون المدينة، ويتحملها <b>البائع</b>.</p>'+
+ '<ul><li>القانون 151/2026 أكد السعر ووضّح نطاقه ليشمل التصرفات المتتالية وتصرفات الورثة وتصرف المالك في عقار مخصص لاستعماله الشخصي.</li>'+
+ '<li>الحصة العينية في رأس مال شركة مساهمة معفاة بشرط ألا تُباع الأسهم الناتجة خلال 5 سنوات.</li>'+
+ '<li>الوزير أعلن إعفاء التصرفات بين الأقارب ضمن الحزمة الثانية.</li></ul>'+
+ '<p>استخدم حاسبة التصرفات العقارية في تبويب «الحاسبات».</p>'+
+ '<div class="note">تفاصيل الإعفاء بين الأقارب وشروطه لازم تتراجع من النص النهائي واللائحة.</div>',
+ 1,'Ecovis – المادة 43 من قانون 91/2005 (151/2026)');
+
+E('inc-art18','income','إلغاء المادة 18 (التقدير الجزافي) وأثره على الفحص',
+ ['المادة 18 ضريبة الدخل','التقدير الجزافي للارباح','الغاء تقدير الارباح بنسب','فحص ضريبي بدون دفاتر'],
+ ['مادة 18','تقدير','جزافي','دفاتر','فحص','تحول رقمي','تقديريه'],
+ '<p>ذكرت تحليلات مهنية أن <b>المادة 18</b> (التقدير الجزافي لصافي الأرباح) <b>ألغيت في 2026</b> دون تعليمات جديدة بديلة، وأن المصلحة قد تلجأ عند غياب الدفاتر المنتظمة إلى المادة 90 من القانون والمادة 114 مكرر من اللائحة (للسنوات 2026–2027). التوجه العام نحو نظام ضريبي رقمي يعتمد على البيانات.</p>'+
+ '<div class="note">المعلومة من تحليلات مهنية على الإنترنت وليست من النص الرسمي. تأكد منها قبل الاعتماد.</div>',
+ 0,'تحليل مهني (LinkedIn) عن قانون 151/2026');
+
+E('inc-interest','income','ضريبة فوائد الودائع والسندات',
+ ['ضريبة فوائد البنوك','ضريبة على شهادات الاستثمار','ضريبة الفوائد على الودائع','ضريبة العائد على السندات'],
+ ['فوائد','ودائع','بنوك','سندات','شهادات','عائد','20%','منبع'],
+ '<p>فوائد البنوك والسندات للأفراد بتتخصم من المنبع بنسبة معروفة <b>20%</b> (بعض الأوعية معفاة بنص خاص مثل شهادات معينة). المعلومة العامة هنا تحتاج مراجعة النص والتعديلات الأخيرة.</p>',
+ 0,'معرفة عامة بقانون 91/2005');
+
+/* ---------------- القيمة المضافة ---------------- */
+E('vat-rate','vat','سعر ضريبة القيمة المضافة',
+ ['ضريبة القيمة المضافة كام في المية','سعر الvat في مصر','ضريبة المبيعات كام','الضريبة على السلع والخدمات 14','ايه هي ضريبة القيمة المضافة'],
+ ['قيمه مضافه','vat','14','مبيعات','سلع','خدمات','سعر عام','فات','فاتوره'],
+ '<p><b>السعر العام 14%</b> على معظم السلع والخدمات بموجب قانون 67 لسنة 2016 (اللي حل محل قانون الضريبة العامة على المبيعات 11 لسنة 1991). وفيه معدلات أخرى: <b>5%</b> للمعدات والأجهزة الطبية المستخدمة في الإنتاج (بعد قانون 149/2026)، و<b>ضريبة الجدول</b> لسلع وخدمات محددة، و<b>إعفاءات</b> و<b>صفر%</b> للتصدير.</p>'+
+ '<p>ضريبة القيمة المضافة هي ضريبة استهلاك: المسجل بيحصّلها من العميل ويخصم منها ضريبة مشترياته (المدخلات) ويورّد الفرق.</p>',
+ 1,'Ahram؛ Andersen؛ Ecovis');
+
+E('vat-table','vat','ضريبة الجدول (سلع وخدمات بأسعار خاصة)',
+ ['ايه ضريبة الجدول','ضريبة الجدول اولا وثانيا','البترول الخام ضريبة 10','ضريبة الغاز الطبيعي','سلع عليها ضريبة جدول','المقاولات 5%'],
+ ['جدول','ضريبه الجدول','غاز طبيعي','بترول خام','10','5','سجائر','مقاولات','نسبيه'],
+ '<p>ضريبة الجدول بتتطبق على سلع وخدمات محددة بأسعار أو مبالغ خاصة: <b>الجدول الأول</b> (أسعار نسبية أو نوعية بدل 14%)، و<b>الجدول الثاني</b> (ضريبة جدول <i>إضافة</i> إلى 14%).</p>'+
+ '<ul><li>القانون 149/2026 فرض <b>ضريبة جدول على الغاز الطبيعي</b> (والمتداول إعلاميًا أيضًا <b>10% على البترول الخام</b> دون التأثير على أسعار المنتجات البترولية المحلية).</li>'+
+ '<li>تم نقل الإعلانات من قانون الدمغة إلى القيمة المضافة بسعر 14% بدل 20% نسبية.</li></ul>'+
+ '<div class="note">مناقشات الحكومة في 2026 تضمنت إخضاع المقاولات للسعر العام 14% بدل جدول 5%، لكن لم أتحقق من صدور ذلك. راجع النص الحالي.</div>',
+ 1,'KPMG؛ Banker News؛ Andersen');
+
+E('vat-registration','vat','حد التسجيل في ضريبة القيمة المضافة',
+ ['امتى اسجل في القيمة المضافة','حد التسجيل في ضريبة القيمة المضافة 500 الف','مين لازم يسجل في القيمة المضافة','التسجيل في ضريبة القيمة المضافة للمهن الحرة'],
+ ['تسجيل','حد التسجيل','500 الف','رقم اعمال','مسجل','مهن حره','محامين','محاسبين'],
+ '<p>الالتزام بالتسجيل يبدأ عند تجاوز رقم الأعمال السنوي <b>500,000 جنيه</b>، ويلتزم بالتسجيل أصحاب بعض المهن والخدمات (مثل المحامين والمحاسبين والمستشارين) <b>أياً كان رقم الأعمال</b> حسب نص القانون، ومنهم المستوردون لغرض الاتجار.</p>'+
+ '<div class="note">راجع النص الحالي للمادة 17 وما بعدها من قانون 67/2016 لمعرفة حدود التسجيل والمهن المحددة وقت تطبيقك.</div>',
+ 0,'معرفة عامة بقانون 67/2016');
+
+E('vat-5','vat','سعر 5% للمعدات والأجهزة الطبية',
+ ['ضريبة 5% على الماكينات','القيمة المضافة على المعدات الطبية','ضريبة الالات والمعدات المصانع','سعر مخفض للمعدات'],
+ ['5%','ماكينات','معدات','الات','اجهزة طبيه','مصانع','وحدات انتاج','مخفض'],
+ '<p>القانون 149/2026 وسّع <b>السعر المخفض 5%</b> ليشمل الماكينات والمعدات والأجهزة الطبية المستخدمة في إنتاج السلع أو أداء الخدمات (باستثناء الأتوبيسات وسيارات الركوب). والمعدات المستخدمة لأغراض طبية تُعامل كجهاز طبي في هذا الشأن.</p>',
+ 1,'Ecovis – قانون 149/2026');
+
+E('vat-suspension','vat','نظام إيقاف الضريبة على المعدات للمصانع',
+ ['ايقاف ضريبة القيمة المضافة على الماكينات','تاجيل الضريبة على استيراد المعدات','نظام ايقاف الضريبة 149','مصنع استورد ماكينات والضريبة'],
+ ['ايقاف','تاجيل','سنه','3 سنوات','معدات','ماكينات','مصانع','وحدات انتاجيه','5 سنوات'],
+ '<p>ضريبة القيمة المضافة المستحقة على الماكينات والمعدات والأجهزة الطبية (المستوردة أو المشتراة محليًا) للمصانع ووحدات الإنتاج بتتوقف <b>لمدة سنة</b> من الإفراج أو الشراء وتمتد حتى <b>3 سنوات</b> إجمالاً. لو ثبت استخدامها في الإنتاج خلال المدة، <b>تُشطب الضريبة الموقوفة بالكامل</b>. التصرف فيها لغرض غير مؤهل خلال <b>5 سنوات</b> من الإعفاء يستحق عليه الالتزام المؤجل. وحزمة 2026 سمحت بخصم الضريبة على المدخلات أثناء فترة الإيقاف.</p>',
+ 1,'Ecovis؛ PwC – قانون 149/2026');
+
+E('vat-refund','vat','رد ضريبة القيمة المضافة (الرصيد المدين)',
+ ['استرداد ضريبة القيمة المضافة','رد الرصيد الدائن في القيمة المضافة','مدة رد الضريبة 4 شهور','رد الضريبة للمشروعات الصغيرة 3 شهور'],
+ ['رد','استرداد','رصيد','4 شهور','3 شهور','4 فترات','سيوله','20 مليون','6 شهور'],
+ '<p>رصيد الضريبة الدائن (ضريبة المدخلات الأكبر من المخرجات) لو استمر أكثر من <b>أربع فترات ضريبية متتالية</b> (يعني 4 شهور) يجب ردّه، بدل ستة شهور سابقًا. وللمشروعات الصغيرة المستفيدة من القانون 6 لسنة 2025 (رقم أعمال حتى 20 مليون جنيه) المدة بتنزل لحوالي <b>ثلاثة شهور</b>.</p>',
+ 1,'Ahram؛ Ecovis؛ PwC – قانون 149/2026');
+
+E('vat-exempt','vat','السلع والخدمات المعفاة من القيمة المضافة',
+ ['ايه المعفى من القيمة المضافة','اعفاءات القيمة المضافة','الخدمات المالية معفاة','اجهزة طبية معفاة','بوتجاز وانبوبة'],
+ ['معفى','اعفاء','اعفاءات','بوتاجاز','انبوبه','بوتان','اجهزه طبيه','خدمات ماليه','بريد','مواد خام طبيعيه','كراسي متحركه','لقاحات'],
+ '<p>القانون 149/2026 وسّع قائمة المعفى لتشمل صراحة:</p>'+
+ '<ul><li>غاز البوتان</li><li>المواد الخام الطبيعية (عدا البترول الخام والغاز الطبيعي)</li><li>أجهزة طبية وتعويضية: كراسي متحركة، أطراف صناعية، سماعات، أجهزة غسيل كلوي، حضانات، أمصال ولقاحات ومشتقات دم</li><li>الخدمات المالية للهيئة القومية للبريد والبنوك والشركات الخاضعة للبنك المركزي أو الهيئة العامة للرقابة المالية</li></ul>'+
+ '<p>وتم توضيح إعفاء تأجير المباني: المقر المستقل لنشاط ما (ولو تجاري) خارج الإعفاء، ما عدا الأنشطة الدينية والخيرية والاجتماعية والتعليمية والصحية المحددة بقرار وزاري.</p>',
+ 1,'Ecovis؛ Ahram – قانون 149/2026');
+
+E('vat-lease','vat','القيمة المضافة على إيجار المباني التجارية والإدارية',
+ ['ضريبة على ايجار المحلات','ضريبة القيمة المضافة على الايجار التجاري','ايجار المولات والمكاتب الادارية ضريبة','تأجير مباني غير سكنية وضريبة'],
+ ['ايجار','تاجير','محلات','مولات','مكاتب','ادارية','تجاري','غير سكني','مباني'],
+ '<p>التعديلات الأخيرة أخضعت <b>تأجير المباني التجارية والوحدات الإدارية</b> للقيمة المضافة بالسعر العام. البرلمان ذكر أن العبء لن يزيد على المسجلين لأنهم يخصمون الضريبة، وغير المسجلين يعاملونها كمصروف واجب الخصم من وعاء ضريبة الدخل. وتُعامل بعض الإيجارات غير السكنية بمعاملة خاصة بحسب القانون 149/2026، فراجع شروطها.</p>',
+ 1,'Ahram؛ PwC – قانون 149/2026');
+
+E('vat-returns','vat','موعد إقرار القيمة المضافة والتقديم الإلكتروني',
+ ['امتى اقدم اقرار القيمة المضافة','اقرار القيمة المضافة شهري','ميعاد سداد ضريبة القيمة المضافة','الاقرار الشهري للقيمة المضافة'],
+ ['اقرار','شهري','ميعاد','موعد','سداد','تقديم','الكتروني','نهايه الشهر'],
+ '<p>الإقرار الشهري بيتقدم إلكترونيًا (بدأ التقديم الإلكتروني من يناير 2019) وموعده عادةً <b>قبل نهاية الشهر التالي</b> لفترة الضريبة، ويُسدد الفرق في نفس الموعد.</p>'+
+ '<div class="note">راجع المادة المختصة من اللائحة وقانون الإجراءات 206/2020 لأن الموعد والتفاصيل ممكن تتغير.</div>',
+ 0,'Andersen (التقديم الإلكتروني) – الموعد من المعرفة العامة');
+
+E('vat-export','vat','تصدير السلع والخدمات (سعر صفر)',
+ ['القيمة المضافة على التصدير','هل في ضريبة على الصادرات','سعر صفر للتصدير','تصدير خدمات وضريبة'],
+ ['تصدير','صادرات','صفر','سعر صفر','مصدر'],
+ '<p>تصدير السلع والخدمات بيخضع عادةً لـ<b>سعر الصفر</b>، يعني بدون ضريبة مخرجات مع الحق في خصم ضريبة المدخلات واسترداد الرصيد الدائن. شروط الخدمات المصدّرة وإثباتها في اللائحة التنفيذية.</p>',
+ 0,'معرفة عامة بقانون 67/2016');
+
+E('vat-ads','vat','الإعلانات والقيمة المضافة',
+ ['ضريبة الاعلانات','الاعلانات 14% ولا 20','دمغة الاعلانات'],
+ ['اعلانات','اعلان','دمغه','20%','14'],
+ '<p>بند <b>الإعلانات</b> اتنقل من قانون الدمغة إلى قانون القيمة المضافة، وبقى خاضع لـ<b>14%</b> بدل ضريبة نسبية 20%.</p>',
+ 1,'Andersen – ضريبة القيمة المضافة في مصر');
+
+/* ---------------- الإجراءات ---------------- */
+E('proc-einvoice','proc','الفاتورة والإيصال الإلكتروني: مين ملزم وإيه الجزاء؟',
+ ['الفاتورة الالكترونية اجبارية','الايصال الالكتروني مين ملزم','عقوبة عدم الالتزام بالفاتورة الالكترونية','المادة 35 و37 من قانون 206','قرار 188 لسنة 2023'],
+ ['فاتوره الكترونيه','ايصال الكتروني','اجباري','المادة 35','المادة 37','المادة 72','نيابه','188','مراحل'],
+ '<ul><li>المادة <b>35</b> من قانون 206/2020 ألزمت الشركات والأشخاص الاعتبارية بتسجيل مبيعاتها ومشترياتها على المنظومة الإلكترونية.</li>'+
+ '<li>المادة <b>37</b> ألزمت كل ممول أو مكلف بإصدار فاتورة ضريبية أو إيصال إلكتروني.</li>'+
+ '<li>قرار وزير المالية <b>188 لسنة 2023</b> أضاف بيانات إلزامية للفاتورة والإيصال الإلكتروني.</li>'+
+ '<li>المصلحة بتحيل غير الملتزمين للنيابة طبقًا للمادة <b>72</b> (إحالة 10 شركات من المرحلة السادسة حسب إعلان يوليو 2026).</li></ul>',
+ 1,'البوابة نيوز؛ Banker News');
+
+E('proc-tempcard','proc','البطاقة الضريبية المؤقتة (8 شهور)',
+ ['البطاقة الضريبية المؤقتة','بطاقة ضريبية للشركات تحت التأسيس','كارت ضريبي مؤقت 8 شهور'],
+ ['بطاقه ضريبيه','مؤقته','8 شهور','تاسيس','ترخيص','فاتوره الكترونيه','تحت التاسيس'],
+ '<p>قانون 150/2026 أتاح للمنشآت تحت التأسيس أو الترخيص طلب <b>بطاقة ضريبية مؤقتة مدتها 8 شهور</b>. أي التزامات تنشأ خلالها تستحق بانتهائها، ولا يمكن استخدامها لإصدار فواتير أو إيصالات إلكترونية، فخطط لسيولتك.</p>',
+ 1,'Ecovis – قانون 150/2026');
+
+E('proc-books','proc','هل لازم دفاتر منتظمة؟',
+ ['الزامية مسك الدفاتر','دفاتر محاسبية الزامية','هل المشروع الصغير محتاج دفاتر','مسك الدفاتر الكترونية'],
+ ['دفاتر','مسك','محاسبيه','الكترونيه','يدويه','تجاره','حرفه'],
+ '<p>قانون 150/2026 أكد التزام كل من يزاول نشاطًا تجاريًا أو صناعيًا أو حرفيًا أو مهنيًا بمسك دفاتر منتظمة (<b>ورقية أو إلكترونية</b>) وفق قانون التجارة، مع استثناء المنشآت الصغيرة المستفيدة من القانون 6 لسنة 2025. والمشروعات الخاضعة لقانون 152/2020 معفاة من تقديم الدفاتر.</p>',
+ 1,'Ecovis؛ Andersen');
+
+E('proc-latefee','proc','سقف مقابل التأخير والضريبة الإضافية (قانون 7 لسنة 2025)',
+ ['غرامة التأخير في سداد الضريبة','مقابل التأخير سقف','الضريبة الاضافية','قانون 7 لسنة 2025','تسوية المخالفات الضريبية'],
+ ['غرامه','مقابل تاخير','ضريبه اضافيه','سقف','7 لسنة 2025','تاخير','تسويه','جرائم ضريبيه'],
+ '<p>القانون <b>7 لسنة 2025</b> (ساري من 13 فبراير 2025) عدّل قانون 206/2020 بوضع <b>سقف لمقابل التأخير والضريبة الإضافية</b>، وإتاحة آلية تسوية لبعض الجرائم الضريبية والمخالفات التي لا تتعلق بالتزامات ضريبية ومخالفات الخصم من المنبع. راجع نص القانون لمعرفة السقف بالنسبة لحالتك.</p>',
+ 1,'EY – Tax News 2025');
+
+E('proc-dispute','dispute','تسوية المنازعات الضريبية (حتى 31 ديسمبر 2026)',
+ ['تسوية المنازعات الضريبية','قانون انهاء المنازعات الضريبية','79 لسنة 2016','مد قانون التسوية','اخر ميعاد للتصالح مع الضرائب'],
+ ['منازعات','تسويه','تصالح','79','152 لسنة 2026','31 ديسمبر','انهاء','لجان داخليه'],
+ '<p>القانون <b>152 لسنة 2026</b> مدّ العمل بآلية قانون إنهاء المنازعات الضريبية (79/2016) حتى <b>31 ديسمبر 2026</b>. اللي عنده نزاع قائم أو بيفكر في تسوية نزاع جديد عنده فرصة إضافية للتقدم. قانون 30/2023 كان قد أتاح بديلًا تشريعيًا لمن لا يتجاوز رقم أعماله 10 ملايين جنيه وفق نظام المادتين 93 و94 من القانون 152/2020.</p>',
+ 1,'Ecovis؛ EY؛ Andersen');
+
+E('proc-sme-settle','proc','تسوية مبسطة للمنشآت الصغيرة عن 2022–2025',
+ ['تسوية الضريبة للمنشآت الصغيرة 2022','تسوية بنظام رقم الاعمال','تسوية مبسطة لحد 10 مليون','ربط ضريبي مبسط عن سنوات سابقة'],
+ ['تسويه','مبسطه','10 مليون','2022','2025','رقم اعمال','ربط غير نهائي','منشات صغيره'],
+ '<p>المنشآت اللي رقم أعمالها السنوي حتى <b>10 ملايين جنيه</b> تقدر تسوّي الربط غير النهائي للفترات من يناير 2022 لحد أوائل 2025 بنظام مبسط يعتمد على رقم الأعمال (نسب أو مبالغ متدرجة) بدل الفحص الكامل، مع حق اختيار الفحص العادي.</p>',
+ 1,'Ecovis – قانون 151/2026');
+
+E('proc-corp-deadline','proc','موعد الإقرار الضريبي للشركات',
+ ['امتى الشركات تقدم اقرار الضريبة','ميعاد اقرار ضريبة الشركات','اقرار الشركات اخر ابريل'],
+ ['شركات','اقرار','موعد','ميعاد','ابريل','4 شهور','سنه ماليه'],
+ '<p>الإقرار الضريبي السنوي للشركات عادةً خلال <b>4 شهور من نهاية السنة المالية</b> (يعني آخر أبريل لمن سنته ميلادية)، ويُقدَّم إلكترونيًا.</p>'+
+ '<div class="note">راجع قانون 206/2020 ولائحته لتأكيد الموعد.</div>',
+ 0,'معرفة عامة');
+
+E('proc-howto','proc','إزاي أقدم الإقرار وأتعامل مع مصلحة الضرائب؟',
+ ['ازاي اقدم الاقرار الضريبي','التعامل مع مصلحة الضرائب','مراكز الخدمة الضريبية المتميزة','بوابة الضرائب المصرية'],
+ ['تقديم','اقرار','بوابه','موقع','مركز','تعامل','ممول','مصلحه الضرائب','التجمع','الشيخ زايد','العلمين'],
+ '<p>التعامل بيتم عبر منظومة مصلحة الضرائب الإلكترونية (بوابة الضرائب)، من تسجيل الممول وتقديم الإقرارات والفواتير الإلكترونية. وزير المالية أعلن إطلاق <b>مراكز خدمة ضريبية متميزة</b> في القاهرة الجديدة والشيخ زايد والعلمين الجديدة، وتفويض المصلحة بعض الخدمات لمنصة e-Tax لأول مرة.</p>',
+ 1,'Business Today Egypt – مارس 2026');
+
+/* ---------------- المشروعات الصغيرة ---------------- */
+E('sme-tiers','sme','ضريبة المشروعات الصغيرة ومتناهية الصغر (قانون 152 لسنة 2020)',
+ ['ضريبة المشروعات الصغيرة','قانون 152 لسنة 2020','ضريبة قطعية للمشروع الصغير','كام الضريبة على مشروع ايراده مليون','ضريبة حجم الاعمال'],
+ ['مشروعات صغيره','متناهيه الصغر','152','قطعيه','نسبيه','رقم اعمال','حجم اعمال','1000','2500','5000','0.5','0.75','1%','sme','ضريبه مبسطه'],
+ '<p>الضريبة <b>قطعية أو نسبية</b> حسب رقم الأعمال السنوي (المبيعات/الإيرادات بإقرار صاحب المشروع)، بدون حاجة لدفاتر أو مستندات:</p>'+
+ '<table class="t"><tr><th>رقم الأعمال السنوي</th><th>الضريبة</th></tr>'+
+ '<tr><td>أقل من 250,000</td><td>1,000 جنيه سنويًا</td></tr><tr><td>250,000 – أقل من 500,000</td><td>2,500 جنيه</td></tr>'+
+ '<tr><td>500,000 – أقل من مليون</td><td>5,000 جنيه</td></tr><tr><td>مليون – أقل من 2 مليون</td><td>0.5% من رقم الأعمال</td></tr>'+
+ '<tr><td>2 مليون – أقل من 3 ملايين</td><td>0.75%</td></tr><tr><td>3 ملايين – 10 ملايين</td><td>1%</td></tr></table>'+
+ '<p>يطبق النظام للمسجلين لدى جهاز تنمية المشروعات (بشهادة تصنيف) لمدة 5 سنوات، وللممول حق الاختيار بين قانون 152/2020 وقانون الدخل 91/2005، ولو قدّر أن المبسط أغلى يقدر يطلب المحاسبة بقانون الدخل. استخدم الحاسبة في تبويب «الحاسبات».</p>',
+ 1,'مصلحة الضرائب (مصراوي 2023)؛ وزير المالية؛ Andersen');
+
+E('sme-benefits','sme','حوافز قانون المشروعات الصغيرة ومتناهية الصغر',
+ ['مزايا قانون المشروعات الصغيرة','حوافز المشروعات الصغيرة الضريبية','اعفاء الدمغة للمشروعات الصغيرة','شهادة التصنيف جهاز تنمية المشروعات','تعريف المشروع الصغير'],
+ ['مزايا','حوافز','اعفاء','دمغه','توثيق','شهر','شهاده تصنيف','جهاز تنميه المشروعات','شركه الشخص الواحد','50 مليون'],
+ '<ul><li>إعفاء من <b>ضريبة الدمغة</b> ورسوم التوثيق والشهر لعقود تأسيس الشركات والتسهيلات الائتمانية والرهن المرتبطة بالنشاط <b>لخمس سنوات</b> من القيد في السجل التجاري.</li>'+
+ '<li>إعفاء الضريبة والرسوم على عقود تسجيل الأراضي اللازمة لإقامة المشروع.</li>'+
+ '<li>إعفاء توزيعات شركة الشخص الواحد من الضريبة لو الشريك شخص طبيعي.</li>'+
+ '<li>تجاوز عن الضريبة المستحقة على مشروعات الاقتصاد غير الرسمي عن السنوات السابقة لمن يسجل ويطلب العفو.</li>'+
+ '<li>من لا يقدم دفاتر ولا مستندات، والنظام الضريبي المبسط دائم.</li></ul>'+
+ '<p>المشروع الصغير في تعريف القانون: رقم أعماله السنوي أقل من <b>50 مليون جنيه</b>، وتعتبر المشروعات الجديدة برأس مال مدفوع أقل من 50 ألف جنيه متناهية الصغر.</p>',
+ 1,'وزير المالية؛ مصلحة الضرائب؛ Andersen');
+
+/* ---------------- الدمغة ---------------- */
+E('stamp-general','stamp','ضريبة الدمغة: إيه هي وإزاي بتتحسب؟',
+ ['ضريبة الدمغة','قانون الدمغة 111 لسنة 1980','دمغة على العقود','ضريبة الدمغة على البورصة','دمغة على المعاملات البنكية'],
+ ['دمغه','دمغة','111 لسنة 1980','ضريبه نسبيه','قطعيه','عقود','بورصه','معاملات بنكيه','دمغه البورصه'],
+ '<p>ضريبة الدمغة بتفرض بقانون <b>111 لسنة 1980</b> على المحررات والعقود والمعاملات (نسبية أو قطعية)، ولها لائحة تنفيذية (قرار وزير المالية 525 لسنة 2006 وتعديلاته).</p>'+
+ '<ul><li>الإعلانات انتقلت للقيمة المضافة (14%).</li><li>المشروعات الصغيرة المسجلة (قانون 152/2020) معفاة من الدمغة على عقود التأسيس والتسهيلات الائتمانية لخمس سنوات.</li>'+
+ '<li>حزمة 2026 عدّلت <b>دمغة تعاملات الأوراق المالية المقيدة بالبورصة</b> (بدل ضريبة الأرباح الرأسمالية). كانت 1.5 في الألف على كل من البائع والمشتري، وكانت هناك مقترحات لتخفيضها لغير المقيمين إلى 1 في الألف.</li></ul>'+
+ '<div class="note">جداول الأسعار التفصيلية للدمغة النسبية والقطعية لم أتحقق منها هنا، وتحتاج مراجعة نص القانون الحالي وتعديل 2026.</div>',
+ 0,'Andersen؛ Enterprise؛ العربية بيزنس');
+
+/* ---------------- الضريبة العقارية ---------------- */
+E('realty-main','realty','الضريبة العقارية على المباني (تعديلات 2026)',
+ ['الضريبة العقارية','ضريبة العقارات المبنية 2026','اعفاء السكن الخاص 100 الف','الضريبة العقارية على الشقة','قانون 196 لسنة 2008','الضريبة على العقارات المبنية'],
+ ['ضريبه عقاريه','عقارات مبنيه','196','100 الف','اعفاء','سكن خاص','سكن رئيسي','قيمه ايجاريه','32%','30%','10%'],
+ '<ul><li>الضريبة <b>سنوية</b> بسعر <b>10%</b> من صافي القيمة الإيجارية التي تحددها لجان الحصر والتقدير.</li>'+
+ '<li>صافي القيمة = القيمة الإيجارية بعد خصم <b>30% للمباني السكنية و32% لغير السكنية</b> (مصروفات الصيانة).</li>'+
+ '<li><b>تعديل 2026:</b> رفع إعفاء الوحدة المتخذة <b>سكنًا خاصًا رئيسيًا</b> للمكلف وأسرته (الزوج والأولاد القصر) إلى <b>100 ألف جنيه</b> صافي قيمة إيجارية سنوية بدل 50 ألفًا.</li>'+
+ '<li>الإعفاء مقصور على مكلف يمتلك وحدة سكنية رئيسية واحدة.</li>'+
+ '<li>إعفاء المكلف من مقابل التأخير إذا سدد كل مستحقاته قبل العمل بالقانون.</li></ul>'+
+ '<p>جرّب حاسبة العقارية في تبويب «الحاسبات».</p>',
+ 1,'اليوم السابع؛ مصراوي؛ العربي الجديد؛ الدستور');
+
+E('realty-calc','realty','مثال حساب الضريبة العقارية على شقة',
+ ['ازاي احسب الضريبة العقارية','مثال حساب الضريبة العقارية','كام الضريبة العقارية على شقة ايجارها السنوي 150 الف','حساب العقارية على الوحدة'],
+ ['حساب','مثال','قيمه ايجاريه','صافي','خصم 30','ضريبه عقاريه','شقه'],
+ '<p>الخطوات: القيمة الإيجارية السنوية ← اطرح 30% (سكني) أو 32% (غير سكني) ← تحصل على الصافي ← للسكن الرئيسي: لو الصافي أقل من 100 ألف تبقى معفاة ← وإلا الضريبة 10%.</p>'+
+ '<div class="note">المصادر الصحفية اختلفت في الجزء الأخير: بعضها قال الضريبة على <b>الزيادة فوق 100 ألف</b> فقط (وهذا الأرجح ويتسق مع النظام السابق)، وبعضها قال على كامل الصافي. الحاسبة تعرض الرقمين. راجع اللائحة التنفيذية.</div>',
+ 1,'مصراوي؛ الدستور (متعارضان جزئيًا)');
+
+E('other-agri','other','ضريبة الأطيان الزراعية',
+ ['ضريبة الاراضي الزراعية','ضريبة الاطيان','قانون الضريبة على الاراضي الزراعية'],
+ ['اطيان','ارض زراعيه','زراعيه','فدان','113 لسنة 1939'],
+ '<p>الأراضي الزراعية تخضع لضريبة سنوية خاصة بقانون <b>113 لسنة 1939</b> وتعديلاته، تحسب على أساس <b>الإيجار القانوني للفدان</b> بحسب مستوى جودة الأرض، وتُحصَّل من خلال المصلحة المختصة. لم أتحقق هنا من معدلات حديثة، وتُسأل مصلحة الضرائب العقارية في منطقتك.</p>',
+ 0,'معرفة عامة');
+
+/* ---------------- حزمة 2026 وأخرى ---------------- */
+E('pkg-overview','pkg','ما هي حزمة التسهيلات الضريبية الثانية (قوانين 148–155 لسنة 2026)؟',
+ ['الحزمة الثانية من التسهيلات الضريبية','ايه الجديد في الضرائب 2026','قوانين 148 لحد 155 لسنة 2026','تعديلات الضرائب يوليو 2026','اخر تعديلات الضرائب','حزمة التسهيلات الضريبية'],
+ ['حزمه','تسهيلات','2026','148','149','150','151','152','153','154','155','جديد','تعديلات','يوليو'],
+ '<p>ثمانية قوانين صدرت بين <b>28 يوليو و2 أغسطس 2026</b> ضمن «الحزمة الثانية من التسهيلات الضريبية» (بعد حوالي 40 جلسة حوار مع المجتمع الضريبي):</p>'+
+ '<ul><li><b>149/2026:</b> القيمة المضافة (5% للمعدات، إيقاف الضريبة، رد أسرع، إعفاءات، إيجار المباني التجارية، الغاز الطبيعي).</li>'+
+ '<li><b>150/2026:</b> الإجراءات (بطاقة مؤقتة 8 شهور، دفاتر).</li>'+
+ '<li><b>151/2026:</b> الدخل (تصرفات عقارية، أرباح رأسمالية، توزيعات، رسملة ضعيفة، قيد البورصة، ديون معدومة، تسوية المنشآت الصغيرة).</li>'+
+ '<li><b>152/2026:</b> مد تسوية المنازعات حتى 31/12/2026.</li>'+
+ '<li><b>148 و153 و154 و155:</b> دمغة البورصة، رسوم تنمية الموارد (مغادرة البلاد والأسمنت)، الإسهام الصحي الشامل، أرباح الشركات المملوكة للدولة.</li></ul>'+
+ '<p>النفاذ: القوانين 148–154 من 29 يوليو 2026، والقانون 155 من 3 أغسطس 2026. بعض الأحكام تنتظر اللائحة.</p>',
+ 1,'PwC؛ EY؛ Ecovis؛ Business Today Egypt');
+
+E('other-devfee','pkg','رسم تنمية الموارد المالية للدولة (مغادرة البلاد والأسمنت)',
+ ['رسم المغادرة من مصر','رسم تنمية الموارد المالية للدولة','رسم على الاسمنت','قانون 147 لسنة 1984'],
+ ['رسم تنميه','موارد ماليه','مغادره','اسمنت','147 لسنه 1984','سفر','مطار'],
+ '<p>حزمة 2026 عدّلت <b>رسوم تنمية الموارد المالية للدولة</b> عن المغادرة من مصر وعن إنتاج الأسمنت (القانون الأصلي 147 لسنة 1984). لم أتحصل على أرقام الرسوم الجديدة، فاسأل جهة التحصيل أو راجع نص القانون.</p>',
+ 1,'PwC – الحزمة الثانية');
+
+E('other-entertain','other','الضريبة على دخول المسارح وأماكن الفرجة والملاهي',
+ ['ضريبة الملاهي','ضريبة دخول السينما والمسارح','قانون 24 لسنة 1999'],
+ ['ملاهي','مسارح','فرجه','سينما','24 لسنه 1999','دخول'],
+ '<p>تُفرض ضريبة على الدخول إلى المسارح وأماكن الفرجة والملاهي بقانون <b>24 لسنة 1999</b> ولها لائحة تنفيذية. أسعارها الحالية تحتاج مراجعة النص.</p>',
+ 0,'سجل التشريعات (وجود القانون واللائحة)');
+
+E('other-customs','other','الضرائب الجمركية',
+ ['الجمارك','قانون الجمارك مصر','ضريبة الاستيراد','رسوم جمركية'],
+ ['جمارك','جمركيه','استيراد','رسوم','207 لسنه 2020','واردات'],
+ '<p>الرسوم والضرائب الجمركية خارج نطاق هذا الدليل التفصيلي. تُحدد بقانون الجمارك (207 لسنة 2020) وتعريفة الاستيراد، وتخضع الواردات كذلك لضريبة القيمة المضافة. الرجوع لمصلحة الجمارك المصرية.</p>',
+ 0,'معرفة عامة');
+
+E('meta-disclaimer','other','هل ده استشارة ضريبية؟ ما حدود هذه الصفحة؟',
+ ['هل ده استشارة ضريبية','هل الاجابات رسمية','الصفحة دي مضمونة','ممكن اعتمد على الصفحة'],
+ ['استشاره','رسمي','ضمان','مسؤوليه','تنبيه','اخلاء'],
+ '<p>المحتوى هنا <b>معلومات عامة</b> مجمّعة من مصادر مهنية وصحفية حتى أكتوبر 2026، وليس استشارة ضريبية أو قانونية. الأسعار والأحكام بتتغير، وبعض التعديلات تنتظر لوائح تنفيذية. الإجابات المعلّمة بـ <b>⚠</b> غير مؤكدة بمصدر في وقت الإعداد، فراجعها مع نص القانون أو محاسب قانوني أو مصلحة الضرائب قبل اتخاذ قرار.</p>',
+ 1,'');
+
+/* ============================================================
+   محرك البحث (تطبيع عربي + وزن الكلمات + أخطاء إملائية بسيطة)
+   ============================================================ */
+function norm(s){
+  s = String(s==null?'':s).toLowerCase();
+  s = s.replace(/[\u0660-\u0669]/g, function(d){return String(d.charCodeAt(0)-0x0660);});
+  s = s.replace(/[\u064B-\u065F\u0670\u0640]/g,'');
+  s = s.replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/ؤ/g,'و').replace(/ئ/g,'ي').replace(/گ/g,'ك').replace(/پ/g,'ب').replace(/چ/g,'ج').replace(/ڤ/g,'ف');
+  s = s.replace(/[^\u0621-\u064Aa-z0-9.%\s]/g,' ');
+  return s.replace(/\s+/g,' ').trim();
+}
+var STOP = {};
+('ايه اي ما ماذا ماهو ماهي هو هي هل في من علي علي الي ده دي دا كام كم ازاي كيف لو انا انت عايز عاوز عاوزه اعرف نفسي ممكن يعني بتاع بتاعه اللي الي ان او ثم مع عند هنا بقي لما امتي متي ليه لماذا عن بس طيب يا حد حاجه شئ عايزه بتتحسب بيتحسب يبقي هيبقي اقدر لازم هوه دول دوك كده كدا مين من').split(' ').forEach(function(w){STOP[w]=1;});
+var SYN = {'ضرايب':'ضريب','ضرائب':'ضريب','ضريبه':'ضريب','راتب':'مرتب','رواتب':'مرتب','ماهيه':'مرتب','مرتبات':'مرتب','شرايح':'شريح','شرائح':'شريح','شريحه':'شريح','نسبه':'سعر','نسب':'سعر','معدل':'سعر','معدلات':'سعر','اسعار':'سعر','سعر':'سعر','كوبون':'توزيع','توزيعات':'توزيع','ارباح':'ارباح','فات':'قيمه','vat':'قيمه','مبيعات':'قيمه','شقه':'عقار','شقق':'عقار','عقارات':'عقار','عقاري':'عقار','عقاريه':'عقار','عمارات':'عقار','ارض':'عقار','اراضي':'عقار','فاتوره':'فاتور','فواتير':'فاتور','ايصال':'ايصال','دمغه':'دمغ','ضرايب':'ضريب','اقرارات':'اقرار','اقرار':'اقرار','تامينات':'تامين','تأمينات':'تامين','مشروعات':'مشروع','مشاريع':'مشروع','مشروع':'مشروع','شركات':'شركه','شركه':'شركه','اجانب':'اجنبي','اجنبي':'اجنبي','مصاريف':'مصروف','تسويات':'تسويه'};
+function stem(t){
+  if(/^[0-9.%]+$/.test(t)) return t;
+  if(SYN[t]) return SYN[t];
+  var w = t.replace(/^(وال|بال|كال|فال|لل|ال|وب|ول)/,'');
+  if(w.length<3) w = t;
+  w = w.replace(/(ات|ون|ين|ها|ان|ه|ي)$/,'');
+  if(w.length<2) w = t;
+  return SYN[w]||w;
+}
+function toks(s){
+  var out=[], a = norm(s).split(' ');
+  for(var i=0;i<a.length;i++){
+    var t=a[i]; if(!t) continue;
+    if(STOP[t]) continue;
+    var st = stem(t);
+    if(st && !STOP[st]) out.push(st);
+  }
+  return out;
+}
+function lev1(a,b){ // true إذا المسافة <=1
+  if(a===b) return true;
+  var la=a.length, lb=b.length;
+  if(Math.abs(la-lb)>1) return false;
+  var i=0,j=0,edits=0;
+  while(i<la && j<lb){
+    if(a[i]===b[j]){i++;j++;continue;}
+    if(++edits>1) return false;
+    if(la>lb) i++; else if(lb>la) j++; else {i++;j++;}
+  }
+  return edits + (la-i) + (lb-j) <= 1;
+}
+var INDEX = null;
+function buildIndex(){
+  INDEX = {docs:[], df:{}};
+  for(var i=0;i<KB.length;i++){
+    var d = KB[i];
+    var bodyText = d.html.replace(/<[^>]+>/g,' ');
+    var f = {
+      title: toks(d.title),
+      kw: toks(d.kws.join(' ')),
+      q: toks(d.qs.join(' ')),
+      body: toks(bodyText),
+      qnorm: d.qs.map(function(x){return toks(x).join(' ');}),
+      raw: norm(d.title+' '+d.kws.join(' ')+' '+d.qs.join(' ')+' '+bodyText)
+    };
+    f.sets = {title:{}, kw:{}, q:{}, body:{}};
+    ['title','kw','q','body'].forEach(function(k){ f[k].forEach(function(t){f.sets[k][t]=1;}); });
+    var seen = {};
+    ['title','kw','q','body'].forEach(function(k){ f[k].forEach(function(t){ if(!seen[t]){seen[t]=1; INDEX.df[t]=(INDEX.df[t]||0)+1;} }); });
+    INDEX.docs.push(f);
+  }
+}
+function idf(t){ var n = INDEX.docs.length, df = INDEX.df[t]||0; return Math.log(1 + (n+1)/(df+1)); }
+function fieldHit(set, t){
+  if(set[t]) return 1;
+  if(t.length>=4){
+    for(var k in set){
+      if(k.length>=4 && (k.indexOf(t)===0 || t.indexOf(k)===0)) return 0.6;
+    }
+  }
+  if(t.length>=5){
+    for(var k2 in set){ if(k2.length>=5 && lev1(t,k2)) return 0.55; }
+  }
+  return 0;
+}
+function search(query){
+  if(!INDEX) buildIndex();
+  var qt = toks(query);
+  var qn = qt.join(' ');
+  if(!qt.length) return [];
+  var res=[];
+  for(var i=0;i<KB.length;i++){
+    var f = INDEX.docs[i], sc = 0;
+    for(var j=0;j<qt.length;j++){
+      var t = qt[j], w = idf(t);
+      var num = /^[0-9.%]+$/.test(t);
+      var h;
+      h = fieldHit(f.sets.title,t); if(h) sc += 3.2*h*w;
+      h = fieldHit(f.sets.kw,t);    if(h) sc += 3.0*h*w;
+      h = fieldHit(f.sets.q,t);     if(h) sc += 2.2*h*w;
+      h = fieldHit(f.sets.body,t);  if(h) sc += 0.7*h*w;
+      if(num && (' '+f.raw+' ').indexOf(' '+t+' ')>=0) sc += 2.5;
+    }
+    for(var k=0;k<f.qnorm.length;k++){
+      var qq = f.qnorm[k];
+      if(qq && qn && (qq===qn)) sc += 12;
+      else if(qq && qn && (qq.indexOf(qn)>=0 || qn.indexOf(qq)>=0) && qn.length>=5) sc += 6;
+    }
+    sc = sc * (KB[i].v ? 1 : 0.97);
+    if(sc>0) res.push({i:i, score:sc});
+  }
+  res.sort(function(a,b){return b.score-a.score;});
+  return res;
+}
+
+/* ============================================================
+   الحاسبات
+   ============================================================ */
+var COLS = [
+  {cap:600000, bands:[[40000,0],[55000,.10],[70000,.15],[200000,.20],[400000,.225],[600000,.25]]},
+  {cap:700000, bands:[[55000,.10],[70000,.15],[200000,.20],[400000,.225],[700000,.25]]},
+  {cap:800000, bands:[[70000,.15],[200000,.20],[400000,.225],[800000,.25]]},
+  {cap:900000, bands:[[200000,.20],[400000,.225],[900000,.25]]},
+  {cap:1200000,bands:[[400000,.225],[1200000,.25]]},
+  {cap:Infinity,bands:[[1200000,.25],[Infinity,.275]]}
+];
+function incomeTax(net){
+  if(!(net>0)) return {tax:0, rows:[]};
+  var col = COLS[COLS.length-1];
+  for(var c=0;c<COLS.length;c++){ if(net<=COLS[c].cap){col=COLS[c];break;} }
+  var prev=0, tax=0, rows=[];
+  for(var i=0;i<col.bands.length;i++){
+    var up=col.bands[i][0], r=col.bands[i][1];
+    if(net<=prev) break;
+    var amt = Math.min(net,up)-prev;
+    if(amt>0){ tax += amt*r; rows.push({from:prev, to:Math.min(net,up), rate:r, amt:amt, tax:amt*r}); }
+    prev = up;
+  }
+  return {tax:tax, rows:rows};
+}
+function smeTax(turn){
+  if(turn<250000) return {tax:1000, note:'أقل من 250 ألف: ضريبة قطعية'};
+  if(turn<500000) return {tax:2500, note:'من 250 ألف إلى أقل من 500 ألف: ضريبة قطعية'};
+  if(turn<1000000) return {tax:5000, note:'من 500 ألف إلى أقل من مليون: ضريبة قطعية'};
+  if(turn<2000000) return {tax:turn*0.005, note:'من مليون إلى أقل من 2 مليون: 0.5%'};
+  if(turn<3000000) return {tax:turn*0.0075, note:'من 2 مليون إلى أقل من 3 ملايين: 0.75%'};
+  if(turn<=10000000) return {tax:turn*0.01, note:'من 3 ملايين إلى 10 ملايين: 1%'};
+  return null;
+}
+function propertyTax(rent, type){
+  var ded = (type==='non') ? 0.32 : 0.30;
+  var net = rent*(1-ded);
+  if(type==='main'){
+    if(net<=100000) return {net:net, tax:0, alt:0, exempt:true, ded:ded};
+    return {net:net, tax:(net-100000)*0.10, alt:net*0.10, exempt:false, ded:ded};
+  }
+  return {net:net, tax:net*0.10, alt:net*0.10, exempt:false, ded:ded};
+}
+function fmt(n){ return Number(n).toLocaleString('en-US',{maximumFractionDigits:2}); }
+
+if(typeof module!=='undefined'){ module.exports = {KB:KB, LAWS:LAWS, search:search, incomeTax:incomeTax, smeTax:smeTax, propertyTax:propertyTax, toks:toks, norm:norm}; }
+
+/* ============================================================
+   قاعدة بيانات الخضوع للقيمة المضافة
+   المصادر: ق 67/2016 + دليل مصلحة الضرائب (ديسمبر 2020) + التعديلات: ق 208/2017، 13/2020، 3/2022، 177/2023، 157/2025
+   وقرارات وزير المالية 417/2025 و418/2025 + قرار 24/2023 (لائحة).
+   st: ex معفى | t1 ضريبة جدول فقط | t2 قيمة مضافة 14% + ضريبة جدول | z0 سعر صفر | r5 سعر 5% | g14 السعر العام 14% | lp إعفاء مؤقت انتهت مدته
+   opt: cond (معفى بشروط) · how (1 نص صريح / 2 اندراج تحت وصف عام) · pg (صفحة الدليل) · am (التعديل)
+   ============================================================ */
+var VAT_ASOF = 'آخر نص مُضمَّن: القانون 157 لسنة 2025 (الجريدة الرسمية 17/7/2025) وقرارات وزير المالية 417 و418 لسنة 2025';
+
+var SRC = [
+ {k:'guide-2020', f:'sources/guide-2020.pdf', t:'دليل مصلحة الضرائب: نصوص قانون القيمة المضافة وفقًا لأحدث التعديلات (ديسمبر 2020) — النص المجمّع والجدول وقائمة الإعفاءات', s:'دليل المصلحة 2020'},
+ {k:'law-67-2016-gazette', f:'sources/law-67-2016-gazette.pdf', t:'قانون 67 لسنة 2016 بإصدار قانون القيمة المضافة — الجريدة الرسمية ع35 مكرر (ج) 7/9/2016 (صورة الجريدة)', s:'ق 67/2016 (الجريدة)'},
+ {k:'law-67-2016-text', f:'sources/law-67-2016-text.pdf', t:'قانون 67 لسنة 2016 — نسخة نصية (الخط المضمّن مشوّه عند النسخ؛ الصفحات تُعرض سليمة)', s:'ق 67/2016 (نص)'},
+ {k:'law-208-2017', f:'sources/law-208-2017.pdf', t:'قانون 208 لسنة 2017 — تعديل بنود التبغ والسجائر والمعسل (ج.ر. ع47 تابع، 23/11/2017)', s:'ق 208/2017'},
+ {k:'law-13-2020', f:'sources/law-13-2020.pdf', t:'قانون 13 لسنة 2020 — تعديل بنود التبغ وإضافة التبغ المسخن والسائل الإلكتروني (ج.ر. ع8 مكرر ب، 24/2/2020)', s:'ق 13/2020'},
+ {k:'law-3-2022', f:'sources/law-3-2022.pdf', t:'قانون 3 لسنة 2022 — تعديل مواد وبنود الجدول وقائمة الإعفاءات وإخضاع الإعلانات (ج.ر. ع3 مكرر هـ، 26/1/2022)', s:'ق 3/2022'},
+ {k:'law-177-2023', f:'sources/law-177-2023.pdf', t:'قانون 177 لسنة 2023 — تعديل بنود التبغ والسجائر والسائل الإلكتروني (ج.ر. ع44 مكرر أ، 4/11/2023)', s:'ق 177/2023'},
+ {k:'law-157-2025', f:'sources/law-157-2025.pdf', t:'قانون 157 لسنة 2025 — السجائر والكحوليات والبترول الخام وإلغاء بند المقاولات (ج.ر. ع29 تابع، 17/7/2025)', s:'ق 157/2025'},
+ {k:'mof-329-2017', f:'sources/mof-329-2017.pdf', t:'قرار وزير المالية 329 لسنة 2017 — تعديل المادة 16 من اللائحة التنفيذية (مواعيد الإقرار)', s:'قرار 329/2017'},
+ {k:'mof-24-2023', f:'sources/mof-24-2023.pdf', t:'قرار وزير المالية 24 لسنة 2023 — تعديل اللائحة التنفيذية (المناطق الحرة، الخدمات المستوردة، تعليق الضريبة على الآلات…)', s:'قرار 24/2023'},
+ {k:'mof-417-2025', f:'sources/mof-417-2025.pdf', t:'قرار وزير المالية 417 لسنة 2025 — تعديل اللائحة التنفيذية (ومنها زيادة ضريبة جدول الكحوليات 15% سنويًا)', s:'قرار 417/2025'},
+ {k:'mof-418-2025', f:'sources/mof-418-2025.pdf', t:'قرار وزير المالية 418 لسنة 2025 — أساس محاسبي لعقود المقاولات المبرمة قبل القانون 157/2025', s:'قرار 418/2025'},
+ {k:'mof-420-2025', f:'sources/mof-420-2025.pdf', t:'قرار وزير المالية 420 لسنة 2025 — نماذج وإجراءات الاستفادة من القانون 6/2025 (المشروعات حتى 20 مليون جنيه) — إجرائي', s:'قرار 420/2025'},
+ {k:'law-5-2025', f:'sources/law-5-2025.pdf', t:'قانون 5 لسنة 2025 — تسوية أوضاع بعض الممولين والمكلفين — إجرائي (لا يغيّر الخضوع)', s:'ق 5/2025'},
+ {k:'law-7-2025', f:'sources/law-7-2025.pdf', t:'قانون 7 لسنة 2025 — تعديل قانون الإجراءات الضريبية الموحد (سقف مقابل التأخير) — إجرائي', s:'ق 7/2025'}
+];
+var SRCMAP = {}; SRC.forEach(function(s){ SRCMAP[s.k]=s; });
+var SRC_PAT = [
+ [/ق\s*208\/2017/,'law-208-2017'],[/ق\s*13\/2020/,'law-13-2020'],[/ق\s*3\/2022/,'law-3-2022'],[/ق\s*177\/2023/,'law-177-2023'],[/ق\s*157\/2025/,'law-157-2025'],
+ [/قرار\s*24\/2023/,'mof-24-2023'],[/قرار\s*417\/2025/,'mof-417-2025'],[/قرار\s*418\/2025/,'mof-418-2025'],[/قرار\s*329\/2017/,'mof-329-2017']
+];
+function vatSrcLinks(it){
+  var out = [], seen = {};
+  function add(k, page){ if(seen[k]) return; seen[k]=1; var s=SRCMAP[k]; out.push({href:s.f+(page?'#page='+page:''), text:s.s+(page?' — ص'+page:'')}); }
+  var m = /ص\s*(\d+)/.exec(it.pg||'');
+  if(m) add('guide-2020', m[1]);
+  var hay = (it.am||'')+' '+(it.ref||'')+' '+(it.pg||'');
+  SRC_PAT.forEach(function(p){ if(p[0].test(hay)) add(p[1]); });
+  var b = /البند \((\d+)\)/.exec(it.ref||'');
+  if(b && /^قائمة السلع والخدمات المعفاة/.test(it.ref)){
+    var n = +b[1], gp = n<=16 ? 46 : (n<=30 ? 47 : (n<=42 ? 48 : 49));
+    var s2 = SRCMAP['law-67-2016-gazette']; out.push({href:s2.f+'#page='+gp, text:'الجريدة الرسمية 2016 (النص الأصلي قبل التعديلات) — ص'+gp});
+  }
+  if(!out.length) add('guide-2020');
+  return out;
+}
+var VI = [];
+function V(id, st, title, kws, rate, ref, text, note, opt){
+  opt = opt || {};
+  VI.push({id:id, st:st, title:title, kws:kws, rate:rate, ref:ref, text:text, note:note||'', cond:!!opt.cond, how:opt.how||1, pg:opt.pg||'', am:opt.am||''});
+}
+var L67 = 'قانون 67 لسنة 2016';
+
+/* ---------- الأحكام العامة ---------- */
+V('g-rate','g14','السعر العام للضريبة على القيمة المضافة',
+ ['السعر العام'],'14%','المادة (2) والمادة (3) من القانون',
+ 'تفرض الضريبة على السلع والخدمات بما فى ذلك السلع والخدمات المنصوص عليها فى الجدول المرافق لهذا القانون، سواء كانت محلية أو مستوردة، فى كافة مراحل تداولها، إلا ماستثنى بنص خاص. … يكون السعر العام للضريبة على السلع والخدمات (١٤٪) اعتبارًا من العام المالى ٢٠١٨/٢٠١٧.',
+ 'الأصل أن كل سلعة أو خدمة تخضع ما لم يرد لها نص إعفاء أو سعر مختلف.',{pg:'ص13'});
+V('z-export','z0','الصادرات (سعر صفر)',
+ ['تصدير','صادرات','مصدر','تصدر','بضاعه للخارج','بيع للخارج','export'],'0% (سعر صفر)','المادة (3) فقرة ثانية',
+ 'ويكون سعر الضريبة (صفر) على السلع والخدمات التى يتم تصديرها طبقًا للشروط والأوضاع التى تحددها اللائحة التنفيذية.',
+ 'سعر الصفر يعني إمكان رد/خصم ضريبة المدخلات (م30 بند 1 معدلة بالقانون 3/2022)، بخلاف الإعفاء.',{pg:'ص13'});
+V('z-free','z0','مشروعات المناطق الحرة والمدن والأسواق الحرة والمناطق الاقتصادية ذات الطبيعة الخاصة',
+ ['منطقه حره','مناطق حره','مدينه حره','سوق حره','منطقه اقتصاديه','مشروع منطقه حره','منطقه اقتصاديه خاصه'],'0% (سعر صفر) بشروط','المادة (6) و(7) بعد استبدالها بالقانون 3/2022 + لائحة قرار 24/2023 م9',
+ 'تخضع للضريبة بسعر (صفر) السلع أو الخدمات التى تصدرها مشروعات المناطق والمدن والأسواق الحرة والمناطق الاقتصادية ذات الطبيعة الخاصة إلى خارج البلاد. كما تخضع للضريبة بسعر (صفر) السلع أو الخدمات الواردة لهذه المشروعات اللازمة لمزاولة النشاط المرخص به … عدا سيارات الركوب.',
+ 'ما يرد للاستهلاك المحلي داخل هذه المناطق أو يخرج للسوق المحلي يخضع للضريبة (م7).',{am:'ق 3/2022 م1',pg:'ق3/2022'});
+V('r5-mach','r5','الآلات والمعدات المستخدمة في إنتاج سلعة أو تأدية خدمة',
+ ['الات','معدات','ماكينات','ماكينه','خط انتاج','الات ومعدات','معدات مصنع','معدات انتاج','الات مصنع'],'5%','المادة (3) فقرة أولى (+ م28 مكررًا تعليق الأداء للمصانع)',
+ 'واستثناءً مما تقدم يكون سعر الضريبة على الآلات والمعدات المستخدمة فى إنتاج سلعة أو تأدية خدمة (٥٪) وذلك عدا الأتوبيسات وسيارات الركوب.',
+ 'الآلات والمعدات الواردة أو المشتراة للمصانع والوحدات الإنتاجية لاستخدامها في الإنتاج الصناعي يُعلَّق أداء الضريبة عليها سنة (تُعفى إن استُخدمت في الإنتاج) — م28 مكررًا المضافة بالقانون 3/2022 ولائحة قرار 24/2023 م34 مكررًا.',{pg:'ص13',am:'ق 3/2022 م2'});
+V('g-ads','g14','الخدمات الإعلانية',
+ ['اعلان','اعلانات','خدمه اعلانيه','دعايه','حمله اعلانيه','اعلان تلفزيوني','اعلان على الانترنت','اعلانات مدفوعه','سوشيال ميديا اعلان'],'14%','المادة (5) من القانون 3/2022 + بند (57) من قائمة الإعفاء',
+ 'تخضع الخدمات الإعلانية لضريبة القيمة المضافة بسعر (١٤٪) وتلغى المادتان (٦٠)، (٦٤) من قانون ضريبة الدمغة الصادر بالقانون رقم ١١١ لسنة ١٩٨٠.',
+ 'كانت «الخدمات الإعلانية» بندًا معفى (57) قبل 2022؛ البند صار الآن يعفي فقط الإعلانات الخاصة بالتبرعات للعلاج والرعاية الطبية بالمستشفيات الأهلية غير الهادفة للربح والمعاهد الحكومية (ق 157/2025 م4).',{am:'ق 3/2022 م5 + ق 157/2025 م4'});
+V('g-gold','g14','المشغولات الذهبية والفضية والبلاتينية والأحجار الكريمة',
+ ['مشغولات ذهبيه','ذهب مشغول','دبله','خاتم ذهب','مصنعيه','مصنعيه ذهب','فضه مشغوله','ذهب','فضه','مجوهرات','حلق ذهب','سلسله ذهب','جواهر','الماس','احجار كريمه','مشغولات'],'14% على قيمة التشغيل (المصنعية) فقط','المادة (10) البند (9)',
+ 'تكون القيمة التى تتخذ أساسًا لربط الضريبة على بيع المشغولات البلاتينية والذهبية والفضية والأحجار الكريمة بقيمة التشغيل (المصنعية) … وتحدد اللائحة التنفيذية ما يعتبر من الأحجار الكريمة وقواعد حساب قيمة التشغيل (المصنعية).',
+ 'الذهب والفضة الخام معفيان (بند 21).',{how:2,pg:'ص17'});
+
+/* ---------- الجدول: أولاً — ضريبة جدول فقط ---------- */
+V('t1-1a1','t1','التمباك (تبغ خام)',['تمباك','تبغ خام','تبغ غير مصنوع'],'100% من القيمة بحد أدنى 40 جنيهًا للكجم (صافي)','الجدول — أولاً/1/أ/1','تبغ خام أو غير مصنوع، وفضلاته: ١ – تمباك … (١٠٠٪) بحد أدنى ٤٠ جنيهًا على الكيلو جرام (صافى)','',{pg:'ص60'});
+V('t1-1a2','t1','التبغ الخام الآخر (غير التمباك)',['تبغ','تبغ خام آخر','فضلات تبغ'],'75% بحد أدنى 60 جنيهًا للكجم (صافي)','الجدول — أولاً/1/أ/2','٢ – غيره … (٧٥٪) بحد أدنى ٦٠ جنيهًا على الكيلو جرام (صافى)','الحد الأدنى كان 20 جنيهًا (ق208/2017) ثم 30 (ق13/2020) ثم 60 (ق177/2023).',{am:'ق 177/2023 م1'});
+V('t1-1b1','t1','السيجار وتبغ الغليون والمكبوس',['سيجار','غليون','تبغ غليون','مكبوس','سيجار كوبي'],'200% بحد أدنى 50 جنيهًا لكل كجم مصنع','الجدول — أولاً/1/ب/1','١ – سيجار، وتبغ الغليون، ومكبوس … (٢٠٠٪) بحد أدنى ٥٠ جنيهًا لكل كجم مصنع','',{pg:'ص60'});
+V('t1-1b2','t1','السيجار التوسكاني',['سيجار توسكاني','توسكاني'],'200% بحد أدنى 35 جنيهًا لكل كجم مصنع','الجدول — أولاً/1/ب/2','٢ – سيجار توسكانى … (٢٠٠٪) بحد أدنى ٣٥ جنيهًا لكل كجم مصنع','',{pg:'ص60'});
+V('t1-1b3','t1','السجائر',['سجاير','سجائر','سيجاره','دخان','علبه سجاير','علبه سجائر','باكو سجاير','كليوباترا','مارلبورو','ايسترن','كارتونه سجاير'],'50% من سعر بيع المستهلك + مبلغ ثابت للعبوة (20 سيجارة): 5 ج (محلي حتى 48 ج) · 7.5 ج (محلي 48–69 ج أو مستورد حتى 69 ج) · 8 ج (أكثر من 69 ج)','الجدول — أولاً/1/ب/3',
+ '٣ – السجاير … (٥٠٪) من سعر بيع المستهلك النهائي بالإضافة إلى: ٥٠٠ قرش للعبوة من أصناف السجائر المنتجة من المصانع المحلية والتي لا يزيد سعر بيعها للمستهلك النهائي على ٤٨ جنيها. ٧٥٠ قرشاً للعبوة … التي يزيد سعر بيعها على ٤٨ جنيهاً ولا يجاوز ٦٩ جنيهاً، أو المستوردة التي لا يجاوز سعرها ٦٩ جنيهاً. ٨٠٠ قرش للعبوة … والتي يزيد سعر بيعها للمستهلك النهائي على ٦٩ جنيهاً.',
+ 'تُزاد الحدود السعرية 12% سنويًا لمدة 3 سنوات تبدأ من 5/11/2025 (ق157/2025 م1، تذييل 3). تُحصَّل على إجمالي سعر البيع شاملًا جميع الضرائب والرسوم من المنتج أو المستورد.',{am:'ق 157/2025 م1'});
+V('t1-1b4','t1','المعسل والنشوق والمدغة ودخان الشعر (الشيشة)',['معسل','شيشه','نشوق','مدغه','دخان شيشه','دخان الشعر','تنباك','فحم معسل'],'مستورد 225% · محلي 190% من القيمة','الجدول — أولاً/1/ب/4','٤- المعسل والنشوق والمدغة ودخان الشعر المخلوط وغير المخلوط…. المستورد (٢٢٥٪) المحلى (١٩٠٪)','',{am:'ق 177/2023 م1'});
+V('t1-1b5','t1','خلاصات وأرواح التبغ',['خلاصات تبغ','ارواح تبغ'],'50% من القيمة','الجدول — أولاً/1/ب/5','٥ – خلاصات وأرواح التبغ — القيمة — (٥٠٪)','',{pg:'ص62'});
+V('t1-1b6','t1','منتجات التبغ الأخرى',['منتجات تبغ','تبغ مصنع'],'50% بحد أدنى 16 جنيهًا للكجم من الدخان الخام الداخل في صناعتها','الجدول — أولاً/1/ب/6','٦ – غيرها … (٥٠٪) بحد أدنى ١٦ جنيهًا عن الكيلو جرام (صافى) من الدخان الخام الداخل فى صناعتها','',{pg:'ص62'});
+V('t1-1b7','t1','منتجات التبغ المسخن',['تبغ مسخن','هيتس','ايكوس','سجائر مسخنه','heets','iqos','عيدان تبغ','كبسول تبغ'],'1800 جنيه لكل كجم صافي من التبغ','الجدول — أولاً/1/ب/7','٧- منتجات التبغ المسخن … ١٨٠٠ جنيه على الكيلو جرام صافى من التبغ','',{am:'ق 13/2020 م3 ← ق 177/2023 م1'});
+V('t1-2','t1','منتجات النفط (بنزين – كيروسين – سولار – مازوت)',['بنزين','سولار','كيروسين','مازوت','فويل','ديزل','وقود','بنزين 92','بنزين 95','بنزين 80','بنزين 90','ديزل اويل','فويل اويل'],'ضريبة جدول بمبلغ ثابت للوحدة (لتر/طن) حسب النوع','الجدول — أولاً/2 (أ–هـ)','٢ – منتجات النفط: (أ) بنزين: بنزين ٨٠ أوكتين (مستورد/محلى)، ٩٠، ٩٢، ٩٥ … (ب) كيروسين (جـ) سولار (د) ديزل أويل (هـ) فويل أويل (مازوت)',
+ 'القيم المطبوعة في دليل المصلحة (ص63) غير مقروءة بثقة (فاصلة عشرية)، فلم أُدرجها؛ راجع الجدول الرسمي لمعرفة قيمة اللتر.',{pg:'ص63'});
+V('t1-3','t1','زيوت الطعام النباتية',['زيت','زيت طعام','زيوت','زيت ذره','زيت عباد الشمس','زيت صويا','زيت نخيل','زيت زيتون','زيوت نباتيه','زيت كانولا','زيت مخلوط'],'0.5% من القيمة','الجدول — أولاً/3',
+ 'زيوت نباتية للطعام ثابتة، سائلة أو جامدة أو منقاة أو مكررة أو مخلوطة … ٠,٥٪',
+ 'على المستورد/المنتج إخطار المصلحة بجهات البيع خلال 15 يومًا من الشهر التالي للبيع. تُسوّى ضريبة الجدول إذا هُدرجت ضمن المسلسل (4).',{am:'ق 3/2022 م3',pg:'ص64'});
+V('t1-4','t1','الزيوت والشحوم المهدرجة (السمن الصناعي)',['سمن صناعي','سمن','مهدرج','شحوم','زبده نباتيه','دهون','شحوم نباتيه','زيوت مهدرجه','مارجرين'],'0.5% من القيمة','الجدول — أولاً/4',
+ 'زيوت وشحوم حيوانية أو نباتية للطعام مهدرجة جزئياً أو كلياً أو مجمدة أو منقاة بأية طريقة أخرى حتى وإن كانت مكررة ولكن غير محضرة أكثر من ذلك.','',{am:'ق 3/2022 م3',pg:'ص64',how:2});
+V('t1-5','t1','المقرمشات والمنتجات المصنعة من دقيق والحلوى من عجين الخبز',['مقرمشات','بسكوت','بسكويت','كيك','ويفر','معجنات','حلويات عجين','كرواسون','بيتي فور','كوكيز','جاتوه'],'5% من القيمة','الجدول — أولاً/5',
+ 'المقرمشات والمنتجات المصنعة من دقيق والحلوى من عجين الخبز بجميع أنواعه',
+ 'الخبز نفسه معفى (بند 6). اندراج البسكويت/الكيك تحت الوصف «منتجات مصنعة من دقيق» — راجع التصنيف إن كان المنتج على حدود الوصف.',{pg:'ص64',how:2});
+V('t1-6','t1','البطاطس المصنعة (الشيبسي)',['شيبسي','شيبس','بطاطس مصنعه','رقائق بطاطس','بطاطس شيبسي','شيبسي بطاطس','chips'],'5% من القيمة','الجدول — أولاً/6','البطاطس المصنعة (الشيبسى وأبداله)','',{pg:'ص64'});
+V('t1-7','t1','الأسمدة والمبيدات الزراعية',['سماد','اسمده','مبيد','مبيدات','مبيد حشري','مبيدات زراعيه','سماد زراعي','اسمده زراعيه'],'5% من القيمة','الجدول — أولاً/7','الأسمدة، والمبيدات الزراعية','',{pg:'ص64'});
+V('t1-8','t1','الجبس',['جبس','جبس بناء'],'5% من القيمة','الجدول — أولاً/8','الجبس','',{pg:'ص64'});
+V('t1-9','g14','المقاولات وأعمال التشييد والبناء (توريد وتركيب)',['مقاولات','مقاول','تشييد','بناء','انشاءات','تشطيبات','مقاولات بناء','توريد وتركيب','اعمال بناء','مقاول تشطيب','تشطيب'],'السعر العام 14% (ألغي بند الجدول 5% بالقانون 157/2025)','الجدول — أولاً/9 (ملغى بالقانون 157/2025 م6)',
+ 'يُلغى المسلسل رقم (٩) من البند "أولاً" من جدول السلع والخدمات المرافق لقانون الضريبة على القيمة المضافة.',
+ 'كان بند الجدول: «المقاولات وأعمال التشييد والبناء (توريد وتركيب) — ٥٪». بعد إلغائه تخضع بالسعر العام (استنتاج من م2 و م3). للعقود والمستخلصات السابقة على القانون والمستمر تنفيذها: القيمة الخاضعة = 36% من إجمالي الفاتورة (قرار 418/2025 م1) دون إعمال الخصم. الخدمات اللازمة لإنشاء/صيانة دور العبادة معفاة (بند 42).',{am:'ق 3/2022 م3 ← ق 157/2025 م6 + قرار 418/2025'});
+V('t1-10','t1','الصابون والمنظفات الصناعية للاستخدام المنزلي',['صابون','منظفات','مسحوق غسيل','سائل غسيل','منظف','مطهر منزلي','سائل جلي','كلور'],'5% من القيمة','الجدول — أولاً/10','الصابون والمنظفات الصناعية للاستخدام المنزلى','',{pg:'ص64',how:2});
+V('t1-11','t1','النقل المكيف بين المحافظات (أتوبيس – سكة حديد)',['نقل مكيف','قطار مكيف','اتوبيس مكيف','سكه حديد مكيف','اتوبيس بين المحافظات','قطار مكيف بين المحافظات','قطار vip','تذكره قطار مكيف','قطار روسي','قطار تالجو'],'5% من القيمة','الجدول — أولاً/11','النقل المكيف بين المحافظات (أتوبيس – سكة حديد)','النقل البري العادي للأشخاص معفى (بند 40) عدا النقل السياحي والنقل المكيف بين المحافظات وتأجير السيارات الملاكي.',{pg:'ص64'});
+V('t1-12','t1','الخدمات المهنية والاستشارية',['خدمات مهنيه','استشارات','استشاري','محاماه','محامي','محاسب','محاسبه','مراجعه حسابات','مكتب هندسي','خدمات استشاريه','اتعاب','استشارات قانونيه','استشارات ضريبيه','مكتب محاسبه','مكتب محاماه','خدمات قانونيه','اتعاب محامي'],'10% من القيمة المدفوعة فعلًا','الجدول — أولاً/12 والحاشية (3)','الخدمات المهنية والاستشارية (٣) — ١٠٪ … (٣) المقصود بالقيمة هى القيمة المدفوعة فعلاً مقابل الخدمة ولا يشمل هذا البند خدمات الحرفيين .',
+ 'خدمات الحرفيين مستثناة. الخدمات الصحية معفاة (بند 39) والتعليم معفى (بند 38). اندراج مهنة بعينها تحت «مهنية/استشارية» تقدير — راجع اللائحة/المصلحة.',{pg:'ص64',how:2});
+V('t1-13','t1','الإنتاج الإعلامي والبرامجي والأفلام والدراما',['مسلسل','دراما','فيلم','افلام','انتاج اعلامي','انتاج سينمائي','برامج تلفزيونيه','مسرحيه','انتاج درامي','فيلم وثائقي','انتاج تلفزيوني'],'5% من القيمة','الجدول — أولاً/13',
+ 'الإنتاج الإعلامى والبرامجى، والأفلام السينمائية، والتليفزيونية، والتسجيلية والوثائقية، وأعمال الدراما التليفزيونية، والإذاعة والمسرحية','حُذفت عبارة «صنف مستحدث» من البند بالقانون 3/2022 م3.',{pg:'ص64',am:'ق 3/2022 م3'});
+V('t1-14','t1','السائل الإلكتروني (للسجائر الإلكترونية / الفيب)',['سائل الكتروني','فيب','vape','سجائر الكترونيه','سيجاره الكترونيه','ليكويد','نكهات فيب','سائل فيب','سجاير الكترونيه'],'4 جنيهات لكل ملليلتر','الجدول — أولاً/14','١٤ السائل الإلكترونى (٦) … ٤ جنيهات لكل مليلتر من السائل. يشمل هذا البند أى سائل يتم استهلاكه من خلال السجائر الإلكترونية سواء كان يحتوى أو لا يحتوى على نيكوتين.','',{am:'ق 13/2020 م3 ← ق 177/2023 م1'});
+V('t1-15','t1','السمة التجارية والصلة بالعملاء (مكوّن المحل التجاري أو الوحدة الإدارية)',['سمه تجاريه','خلو رجل','خلو','مكون المحل التجاري','صله بالعملاء','حق انتفاع تجاري','شهره تجاريه','مفتاح محل','خلو محل'],'10% من القيمة الإيجارية أو البيعية بحسب الأحوال','الجدول — أولاً/15',
+ 'السمة التجارية والصلة بالعملاء (مكون المحل التجاري أو الوحدة الإدارية) بواقع (١٠٪) من القيمة الإيجارية أو البيعية بحسب الأحوال.','',{am:'ق 3/2022 م4 ← ق 157/2025 م2',how:2});
+V('t1-16','t1','البترول الخام',['بترول خام','خام بترول','نفط خام','بترول','نفط'],'10% من القيمة','الجدول — أولاً/16 (مضاف بالقانون 157/2025 م5)','١٦ — البترول الخام — القيمة — ١٠٪',
+ 'كان البترول الخام بندًا معفى (18) فأُلغي الإعفاء بالقانون 157/2025 م6، واستُثني البترول الخام من بند (20).',{am:'ق 157/2025 م5 و م6'});
+
+/* ---------- الجدول: ثانياً — قيمة مضافة 14% + ضريبة جدول ---------- */
+V('t2-1','t2','المياه الغازية (المشروبات الغازية)',['مياه غازيه','مشروبات غازيه','بيبسي','كوكاكولا','كولا','سفن اب','سبرايت','ميرندا','صودا','مشروب غازي','مياه غازيه معطره','مياه غازيه محلاه','بوست ميكس','كانز غازي','مياه غازيه صودا'],'ضريبة جدول 8% + القيمة المضافة 14%','الجدول — ثانياً/1',
+ 'مياه غازية صودا أو مياه غازية معطرة ومحلاة أو غير محلاة معبأة فى زجاجات أو أوعية أخرى … (٨٪) — القيمة = سعر بيع المستهلك النهائى.','تُحصَّل الضريبتان على إجمالي سعر البيع النهائي من المنتج أو المستورد عند الإفراج. يُخصم ضريبة المدخلات من القيمة المضافة فقط (لا من ضريبة الجدول).',{pg:'ص65'});
+V('t2-2','t2','الجعة غير الكحولية',['بيره غير كحوليه','جعه غير كحوليه','مالت','بيره بدون كحول','بيره صفر كحول','مالت بيره'],'ضريبة جدول 8% + القيمة المضافة 14%','الجدول — ثانياً/2','الجعة (البيرة) غير الكحولية — القيمة — (٨٪)','',{pg:'ص65'});
+V('t2-3a','t2','الكحول الإيثيلي النقي غير المحول',['كحول ايثيلي','كحول طبي','سبرتو','كحول نقي','ايثانول','كحول ابيض'],'ضريبة جدول 15 جنيهًا للتر الصرف + القيمة المضافة 14%','الجدول — ثانياً/3/(أ)','٣ (أ) كحول إثيلى نقى غير محول مهما بلغت درجته الكحولية — اللتر الصرف — ١٥ جنيهًا','',{pg:'ص65',how:2});
+V('t2-3b','t2','الكحول المحوَّل للوقود',['كحول محول','كحول وقود','سبرتو وقود','كحول محول للوقود'],'ضريبة جدول جنيه واحد للتر السائل + القيمة المضافة 14%','الجدول — ثانياً/3/(ب)','(ب) كحول محول من أى درجة للوقود … اللتر السائل — جنيه واحد','',{pg:'ص65'});
+V('t2-3c','t2','النبيذ والمشروبات المخمرة',['نبيذ','وين','فرموت','شمبانيا','مشروبات مخمره','عصير عنب مخمر','نبيذ عنب','نبيذ احمر','نبيذ ابيض'],'ضريبة جدول بالهيكتولتر: 2800 ج (كحول ≤8%) · 3600 ج (>8% حتى 16%) · 4800 ج (>16%) + القيمة المضافة 14%','الجدول — ثانياً/3/(ج)',
+ '(ج) نبيذ عنب طازج وعصير عنب أوقف اختماره بإضافة الكحول (بما في ذلك المستلا) وفرموت وأنبذة أخرى. مشروبات مخمرة. نسبة كحول أقل من أو يساوي (٨٪): ٢٨٠٠ جنيه … أعلى من (٨٪) وحتى (١٦٪): ٣٦٠٠ جنيه … أعلى من (١٦٪): ٤٨٠٠ جنيه (للهيكتولتر).',
+ 'تُزاد ضريبة الجدول 15% سنويًا من 1/1/2026 لمدة 3 سنوات ثم 12% سنويًا من 1/1/2029 (ق157/2025 م3؛ قرار 417/2025 م45 مكررًا). أي أن القيم أعلاه هي الأساس قبل الزيادة السنوية.',{am:'ق 157/2025 م3 + قرار 417/2025'});
+V('t2-3d','t2','المشروبات الروحية والكحولية',['ويسكي','فودكا','جن','رم','براندي','كونياك','مشروبات روحيه','مشروبات كحوليه','خمور','ليكيور','تكيلا','عرق','مشروب كحولي','مشروبات كحوليه محلاه','خمره'],'ضريبة جدول بالهيكتولتر: 2800 ج (≤8%) · 3600 ج (>8–16%) · 4800 ج (>16%) + القيمة المضافة 14%','الجدول — ثانياً/3/(د)',
+ '(د) مشروبات روحية ومشروبات كحولية محلاة، معطرة، مشروبات كحولية أخرى، محضرات كحولية مركبة، مقطرات طبيعية… بالهيكتولتر: ٢٨٠٠ / ٣٦٠٠ / ٤٨٠٠ جنيه بحسب نسبة الكحول.',
+ 'تُزاد 15% سنويًا من 1/1/2026 لمدة 3 سنوات (قرار 417/2025 م45 مكررًا).',{am:'ق 157/2025 م3 + قرار 417/2025'});
+V('t2-4','t2','الجعة (البيرة) الكحولية',['بيره','بيره كحوليه','جعه','جعه كحوليه','ستيلا','هينيكن','بيره بالكحول'],'ضريبة جدول بالهيكتولتر: 2800 ج (≤8%) · 3600 ج (>8–16%) · 4800 ج (>16%) + القيمة المضافة 14%','الجدول — ثانياً/4',
+ '٤ الجعة (البيرة) الكحولية: نسبة كحول أقل من أو يساوي (٨٪): ٢٨٠٠ جنيه … أعلى من (٨٪) وحتى (١٦٪): ٣٦٠٠ جنيه … أعلى من (١٦٪): ٤٨٠٠ جنيه (للهيكتولتر).',
+ 'تُزاد 15% سنويًا من 1/1/2026 لمدة 3 سنوات (قرار 417/2025). كانت ٢٥٠٪ بحد أدنى ٥٠٠ ج/هيكتولتر قبل ق157/2025.',{am:'ق 157/2025 م3 + قرار 417/2025'});
+V('t2-5','t2','العطور ومستحضرات التجميل والعناية بالجلد والشعر',['عطر','عطور','مكياج','ميك اب','كريم','لوشن','شامبو','بلسم','مزيل عرق','احمر شفاه','ماسكرا','كريم اساس','مستحضرات تجميل','عنايه بالبشره','عنايه بالشعر','صبغه شعر','بودره','طلاء اظافر','مرطب','كريم مرطب','واقي شمس','ديودورانت','منتجات عنايه'],'ضريبة جدول 8% + القيمة المضافة 14%','الجدول — ثانياً/5',
+ 'محضرات عطور أو تطرية أو تجميل ومنتجات معدة للعناية بالجلد أو الشعر — القيمة — (٨٪)','اندراج منتج بعينه (شامبو/كريم…) تحت الوصف يخضع للتصنيف الجمركي — راجع إن كان المنتج دوائيًا (الأدوية معفاة).',{pg:'ص66',how:2});
+V('t2-6','t2','التليفزيونات (أكبر من 32 بوصة) والثلاجات (أكبر من 16 قدم) والديب فريزر',['تلفزيون','تليفزيون','شاشه','تلفاز','ثلاجه','ديب فريزر','فريزر','تلفزيون 43','شاشه 55','شاشه ذكيه','smart tv','تلفزيون ذكي','ثلاجه 18 قدم','فريزر راسي'],'ضريبة جدول 8% + القيمة المضافة 14%','الجدول — ثانياً/6',
+ 'التليفزيونات (أكبر من ٣٢ بوصة) / الثلاجات (أكبر من ١٦ قدم) / الديب فريزر — القيمة — (٨٪)','بند الجدول لا ينطبق إلا على التليفزيون الأكبر من 32 بوصة والثلاجة الأكبر من 16 قدمًا؛ ما دون ذلك يخضع للقيمة المضافة بالسعر العام فقط (استنتاج من نص البند).',{pg:'ص66'});
+V('t2-7','t2','أجهزة وحدات التكييف والتبريد',['تكييف','مكيف','تكييف هواء','اير كونديشن','سبليت','وحدات تكييف','مكيفات','تبريد هواء','تكييف سبليت'],'ضريبة جدول 8% + القيمة المضافة 14%','الجدول — ثانياً/7','أجهزة ووحدات تكييف وتبريد الهواء، ووحداتها المستقلة — القيمة — (٨٪)','',{am:'ق 3/2022 م3',pg:'ص66'});
+V('t2-8','t2','سيارات نقل الأشخاص في ملاعب الجولف',['سياره جولف','سيارات جولف','عربيه جولف','جولف كارت','سيارات ملاعب'],'ضريبة جدول 10% + القيمة المضافة 14%','الجدول — ثانياً/8','سيارات خاصة لنقل الأشخاص فى ملاعب الجولف، سيارات مماثلة — القيمة — (١٠٪)','',{pg:'ص67'});
+V('t2-9','t2','سيارات الركوب حتى 1600 سم³',['سياره','سيارات','عربيه','عربيات','سياره ركوب','سياره صغيره','سياره 1600','سياره 1300','سياره 1500','سياره ملاكي','عربيه جديده','سياره ملاكي صغيره'],'ضريبة جدول 1% + القيمة المضافة 14%','الجدول — ثانياً/9',
+ 'سيارات ركوب حتى ١٦٠٠ سم٣ أو ذات المحركات الدوارة فيما عدا المركبات ذات الثلاث عجلات التى تعمل بمحرك دراجة نارية — القيمة — (١٪)','تتحدد الفئة بسعة السلندرات؛ راجع بنود 10 و11 للسعات الأكبر. السيارات المجهزة للمعاقين: انظر بند 52 الملغى.',{pg:'ص67',how:2});
+V('t2-10','t2','سيارات الركوب من 1601 إلى 2000 سم³ وسيارات الجيب والنقل المختلط',['سياره 1800','سياره 2000','سياره 1601','جيب','سياره جيب','سياره رحلات','كرفان','مقطوره مجهزه','سياره نقل ركاب وبضائع','سياره 1700','سياره دفع رباعي','سياره suv','سياره بيك اب ركاب'],'ضريبة جدول 15% + القيمة المضافة 14%','الجدول — ثانياً/10',
+ 'سيارات ركوب سعة السلندرات ١٦٠١ سم٣ حتى ٢٠٠٠ سم٣ أو ذات المحركات الدوارة، وسيارات نقل البضائع والأشخاص معًا وسيارات الجيب وسيارات رحلات ومعسكرات مجهزة للمعيشة ومقطورات مجهزة للرحلات — القيمة — (١٥٪)','',{pg:'ص67'});
+V('t2-11','t2','سيارات الركوب أكثر من 2000 سم³',['سياره 2500','سياره 3000','سياره اكثر من 2000','سياره فاخره','سياره مستورده','سياره محليه فاخره','سياره 3500','سياره كبيره'],'ضريبة جدول: محلي 15% · مستورد 30% + القيمة المضافة 14%','الجدول — ثانياً/11 (أ) و(ب)',
+ '(أ) سيارات ركوب سعة السلندرات أكثر من ٢٠٠٠ سم٣ أو ذات المحركات الدوارة (محلى) — (١٥٪) … (ب) … (مستوردة) — (٣٠٪)','',{pg:'ص67'});
+V('t2-12','t2','خدمات الاتصالات عبر شبكات المحمول',['محمول','موبايل','كارت شحن','رصيد','فاتوره محمول','باقه','اتصالات','فودافون','اورنج','اتصالات مصر','وي','شحن رصيد','خدمات محمول','باقه محمول','انترنت محمول','دقائق'],'ضريبة جدول 8% + القيمة المضافة 14%','الجدول — ثانياً/12','خدمات الاتصالات عن طريق شبكات المحمول (١) — القيمة — (٨٪) … (١) المقصود بالقيمة هى قيمة الفاتورة أو قيمة الخدمة.','هذا البند يخص الخدمة (فاتورة/رصيد). أما جهاز الموبايل نفسه فلا يوجد له بند خاص في المصادر المرفقة، فيخضع بالسعر العام 14% (م2/م3).',{pg:'ص67'});
+
+/* ---------- قائمة السلع والخدمات المعفاة ---------- */
+var LX = 'قائمة السلع والخدمات المعفاة — البند ';
+V('e1','ex','ألبان الأطفال والألبان ومنتجاتها',['لبن','حليب','لبن اطفال','البان','جبنه','جبن','زبادي','قشطه','زبده','لبن رايب','منتجات البان','البان اطفال','لبن بودره','لبن سائل','جبنه رومي','جبنه بيضاء','لبن مجفف'],'معفى',LX+'(1)','ألبان الأطفال، وألبان ومنتجات صناعة الألبان، والمنتجات المتحصل عليها من اللبن بواسطة استبدال عنصر أو أكثر من عناصره الطبيعية .','',{pg:'ص68',how:2});
+V('e2','ex','محضرات أغذية الأطفال',['اغذيه اطفال','سيريلاك','سيرلاك','اكل اطفال','محضرات اطفال','بيبي فود','اغذيه رضع','طعام اطفال'],'معفى',LX+'(2)','محضرات أغذية الأطفال .','',{pg:'ص68'});
+V('e3','ex','البيض عدا المبستر',['بيض','بيضه','بيض مائده','بيض دجاج','بيض بلدي'],'معفى (عدا المبستر)',LX+'(3)','البيض عدا المبستر منه .','البيض المبستر لا يشمله الإعفاء ويخضع للسعر العام.',{pg:'ص68'});
+V('e4','ex','الشاي والسكر والبن',['شاي','سكر','بن','قهوه','قهوه بن','شاي ليبتون','سكر ابيض','شاي سائب','بن محوج'],'معفى',LX+'(4)','الشاى والسكر والبن .','',{pg:'ص68'});
+V('e5','ex','منتجات المطاحن',['دقيق','طحين','نخاله','دقيق اسمر','دقيق ابيض','مطاحن','دقيق 82','دقيق فاخر محلي','سميد','دقيق بلدي'],'معفى (عدا الدقيق الفاخر أو المخمر المستورد)',LX+'(5)','منتجات المطاحن فيما عدا الدقيق الفاخر المستورد أو المخمر المستورد من الخارج.','',{am:'ق 3/2022 م3',pg:'ص68',how:2});
+V('e6','ex','الخبز بجميع أنواعه',['خبز','عيش','عيش بلدي','عيش فينو','رغيف','عيش مدعم','فينو','عيش سياحي','عيش شامي','خبز توست','توست'],'معفى',LX+'(6)','الخبز بجميع أنواعه .','',{pg:'ص68'});
+V('e7','ex','المكرونة',['مكرونه','مكرونه عاديه','باستا','شعريه','اسباجتي','مكرونه سادة'],'معفى (عدا ما يدخل فيها السيمولينا)',LX+'(7)','المكرونة، عدا المكرونة التى يدخل فى صناعتها السيمولينا .','المكرونة التي يدخل في صناعتها السيمولينا تخضع للسعر العام (استثناء صريح).',{pg:'ص68'});
+V('e8','ex','الحيوانات والطيور الحية أو المذبوحة (لحوم ودواجن)',['فراخ','دجاج','لحمه','لحوم','لحم','لحم بقري','لحم ضاني','ماشيه','عجول','جاموس','ديك رومي','بط','ارانب','حمام','اغنام','خراف','ضان','كندوز','فرخه','طيور حيه','لحمه طازجه','دواجن','لحوم طازجه'],'معفى',LX+'(8)','الحيوانات والطيور الحية أو المذبوحة الطازجة أو المبردة أو المجمدة .','اللحوم المصنعة/المحفوظة: بند (9).',{pg:'ص68'});
+V('e9','ex','محضرات وأصناف اللحوم المحفوظة أو المصنعة',['لانشون','بسطرمه','سجق','برجر','مرتديلا','لحوم مصنعه','لحوم محفوظه','كبده مجمده','نقانق','ساجق','لحوم مجهزه','هوت دوج','لحوم معلبه','كفته جاهزه','لحوم مدخنه'],'معفى',LX+'(9)','محضرات وأصناف محفوظة أو مصنعة أو مجهزة من اللحوم .','',{pg:'ص68',how:2});
+V('e10','ex','الأسماك والكائنات المائية',['سمك','اسماك','سمك طازج','سمك مجمد','جمبري','قشريات','سمك مبرد','بلطي','بوري','سمك بلطي','سمك مبرد وطازج','روبيان'],'معفى',LX+'(10)','الأسماك والكائنات المائية الطازجة أو المبردة أو المجمدة .','',{pg:'ص68'});
+V('e11','ex','محضرات وأصناف الأسماك المحفوظة (والرنجة المدخنة)',['تونه','سردين','رنجه','فسيخ','سمك معلب','سمك محفوظ','سردين معلب','تونه معلبه','سمك مملح','سمك مصنع'],'معفى (عدا الكافيار وأبداله وباقي الأسماك المدخنة)',LX+'(11)','محضرات وأصناف محفوظة أو مصنعة أو مجهزة من الأسماك والرنجة المدخنة فيما عدا الكافيار وأبداله وباقى أنواع الأسماك المدخنة .','الكافيار وباقي الأسماك المدخنة (غير الرنجة) غير معفاة.',{pg:'ص68',how:2});
+V('e12','ex','المنتجات الزراعية التي تباع بحالتها الطبيعية',['ارز','رز','قمح','ذره','شعير','فاكهه','فواكه','خضار','خضروات','طماطم','بصل','بطاطس','موز','برتقال','تمر','محاصيل','بذور','تقاوي','شتلات','محصول زراعي','قطن','قصب','بنجر','طازج','خضر','ثوم','خيار','جزر','فراوله','عنب','مانجو','ليمون','تفاح','بطيخ','محاصيل زراعيه','ورق عنب طازج'],'معفى (بحالتها الطبيعية)',LX+'(12)','المنتجات الزراعية التى تباع بحالاتها الطبيعية بما فيها البذور والتقاوى والشتلات.','عبارة «عدا التبغ» حُذفت بالقانون 3/2022. المنتج المصنَّع (مجمد/معلب/عصير) يخضع لبنود أخرى.',{am:'ق 3/2022 م3',pg:'ص68',how:2});
+V('e13','ex','الحلاوة الطحينية والطحينة والعسل',['حلاوه طحينيه','طحينه','عسل اسود','عسل نحل','عسل','حلاوه','طحينيه','حلاوه','دبس','عسل ابيض'],'معفى',LX+'(13)','الحلاوة الطحينية، والطحينة، والعسل الأسود، وعسل النحل .','',{pg:'ص68'});
+V('e14','ex','الخضر والفواكه المصنعة محليًا',['مخلل','مخللات','مربي','مربى','خضار مجمد','خضروات معلبه','فواكه معلبه','فاكهه معلبه','طماطم معلبه','صلصه','رب طماطم','فول معلب','خضار مصنع','فواكه مجففه','بطاطس مجمده','خضروات مجمده','فاكهه مجمده'],'معفى (عدا العصائر ومركزاتها)',LX+'(14)','الخضر والفواكه المصنعة محلياً عدا العصائر ومركزاتها.','العصائر ومركزاتها مستثناة من الإعفاء. عبارة «عدا البطاطس» حُذفت بالقانون 3/2022. «محليًا» يعني أن المستورد المصنَّع لا يشمله الإعفاء بهذا البند (استنتاج من النص).',{am:'ق 3/2022 م3',pg:'ص68',how:2});
+V('e15','ex','البقول والحبوب وملح الطعام والتوابل المصنعة',['عدس','فول','حمص','لوبيا','فاصوليا','ملح','ملح طعام','توابل','بهارات','شطه','كمون','فلفل','حبوب','بقول','فول سوداني','لب','ذره حبوب','فول مدمس','حبوب جافه'],'معفى',LX+'(15)','البقول والحبوب وملح الطعام والتوابل المصنعة وخدمات النولون على ما يستورد منها.','',{am:'ق 3/2022 م3',pg:'ص68',how:2});
+V('e16','ex','المأكولات التي تباع للمستهلك مباشرة من المطاعم والمحال غير السياحية',['مطعم','مطاعم','وجبات','اكل جاهز','كافيه','كوفي شوب','ديليفري','طلبات اكل','كشري','فول وطعميه','وجبه','ماكولات','مطعم سياحي','كافتيريا','وجبات جاهزه','سندوتشات','محل فراخ مشويه'],'معفى بشروط (المطاعم والمحال غير السياحية)',LX+'(16)','المأكولات التى تصنع أو تباع للمستهلك النهائى مباشرة من خلال المطاعم والمحال غير السياحية التى تتوافر فيها الاشتراطات التى يصدر بتحديدها قرار من وزير المالية .','المطاعم والمحال السياحية أو التي لا تستوفي الاشتراطات تخضع للسعر العام. الاشتراطات تُحدَّد بقرار وزير المالية (غير مرفق بين الملفات).',{cond:1,pg:'ص68'});
+V('e17','ex','خدمات المياه والصرف الصحي',['مياه','مياه شرب','فاتوره مياه','صرف صحي','تحلية','تنقية مياه','توزيع مياه','خدمات صرف','مياه الشرب'],'معفى (عدا المياه المعبأة)',LX+'(17)','خدمات الصرف الصحى، تنقية أو تحلية أو توزيع المياه عدا المياه المعبأة.','',{am:'ق 3/2022 م3',pg:'ص68'});
+V('x-water','g14','المياه المعبأة',['مياه معبأه','مياه معدنيه','زجاجه مياه','مياه شرب معبأه','ازازه مياه','مياه نستله','مياه صحه','مياه بيور','مياه معبأه زجاجات'],'السعر العام 14%','استثناء من البند (17) من قائمة الإعفاء','تنقية أو تحلية أو توزيع المياه عدا المياه المعبأة.','المياه المعبأة مستثناة صراحةً من الإعفاء فتخضع للسعر العام.',{am:'ق 3/2022 م3'});
+V('e19','ex','الغاز الطبيعي وغاز البوتان (البوتاجاز)',['غاز طبيعي','غاز','بوتاجاز','انبوبه','انبوبه بوتاجاز','غاز بوتان','بوتان','غاز منزلي','غاز الطبخ','انبوبه غاز','فاتوره غاز'],'معفى (حسب النص المرفق)',LX+'(19)','الغاز الطبيعى وغاز البوتين (البوتاجاز) .','الصفحة تذكر أن القانون 149/2026 فرض ضريبة جدول على الغاز الطبيعي — هذا القانون غير مرفق، فلم أتحقق منه.',{pg:'ص68'});
+V('e20','ex','المواد الطبيعية ومنتجات المناجم والمحاجر بحالتها الطبيعية',['رمل','زلط','حجر','محاجر','مناجم','رخام خام','جرانيت خام','حصى','طفله','منتجات مناجم','مواد طبيعيه','حجر جيري','رمل بناء','دولوميت'],'معفى (عدا البترول الخام)',LX+'(20)','المواد الطبيعية بما فيها منتجات المناجم والمحاجر بحالتها الطبيعية فيما عدا البترول الخام .','',{am:'ق 157/2025 م4',pg:'ص69',how:2});
+V('e21','ex','الذهب الخام والفضة الخام',['ذهب خام','فضه خام','سبائك ذهب','ذهب خام غير مشغول','ذهب','فضه'],'معفى',LX+'(21)','الذهب الخام والفضة الخام .','المشغولات الذهبية تخضع على قيمة المصنعية فقط (م10 بند 9).',{pg:'ص69',how:2});
+V('e22','ex','التيار الكهربائي (إنتاج – نقل – بيع – توزيع)',['كهرباء','فاتوره كهرباء','تيار كهربائي','استهلاك كهرباء','عداد كهرباء','خدمات كهرباء'],'معفى',LX+'(22)','إنتاج أو نقل أو بيع أو توزيع التيار الكهربائى .','',{pg:'ص69'});
+V('e23','ex','بقايا ونفايات صناعة الأغذية ونفايات الورق',['نفايات ورق','بقايا اغذيه','كرتون مستعمل','نفايات اغذيه','سكراب ورق','ورق مستعمل','نفايات صناعه الاغذيه'],'معفى',LX+'(23)','بقايا ونفايات صناعة الأغذية ونفايات الورق .','',{pg:'ص69'});
+V('e24','ex','أغذية الحيوانات والطيور والأسماك (الأعلاف)',['علف','اعلاف','علف مواشي','علف دواجن','علف سمك','اغذيه حيوانات','علف حيواني','مركزات اعلاف','اضافات اعلاف'],'معفى (عدا ما يُستخدم لتغذية القطط والكلاب وأسماك الزينة)',LX+'(24)','أغذية محضرة للحيوانات والطيور والأسماك (محضرات وإضافات ومركزات الأعلاف) فيما عدا ما يستخدم لتغذية القطط والكلاب وأسماك الزينة.','أكل القطط والكلاب وأسماك الزينة يخضع للسعر العام.',{am:'ق 3/2022 م3',pg:'ص69'});
+V('x-pet','g14','أغذية القطط والكلاب وأسماك الزينة',['اكل قطط','اكل كلاب','طعام قطط','طعام كلاب','اكل سمك زينه','اكل حيوانات اليفه','اغذيه حيوانات اليفه','اكل قطط وكلاب','رويال كانين'],'السعر العام 14%','استثناء من البند (24) من قائمة الإعفاء','أغذية محضرة للحيوانات … فيما عدا ما يستخدم لتغذية القطط والكلاب وأسماك الزينة.','',{am:'ق 3/2022 م3'});
+V('e25','ex','الباجاس وعجائن الورق وورق الصحف والطباعة والكتابة',['ورق صحف','ورق طباعه','ورق كتابه','ورق a4','ورق تصوير','باجاس','عجينه ورق','ورق','رزمه ورق','ورق طباعه a4'],'معفى',LX+'(25)','الباجاس وعجائن الورق وورق الصحف وورق طباعة وكتابة.','',{am:'ق 3/2022 م3',pg:'ص69'});
+V('e26','ex','الكراسات والكشاكيل والكتب والمذكرات التعليمية والصحف والمجلات',['كراسه','كراسات','كشكول','كشاكيل','كتاب','كتب','مذكره','جريده','جرنال','مجله','مجلات','صحيفه','صحف','كتب مدرسيه','مذكرات تعليميه','كتاب مدرسي','كتب خارجيه'],'معفى',LX+'(26)','الكراسات والكشاكيل، والكتب، والمذكرات التعليمية، والصحف والمجلات .','',{pg:'ص69'});
+V('e27','ex','الطوابع البريدية والمالية',['طوابع بريديه','طوابع ماليه','طابع بريد','طابع مالي','طوابع'],'معفى',LX+'(27)','الطوابع البريدية والمالية .','',{pg:'ص69'});
+V('e28','ex','بيع وتأجير الأراضي والمباني والوحدات السكنية وغير السكنية',['ايجار','تاجير','ايجار شقه','ايجار محل','ايجار مكتب','ارض','اراضي','شقه','شقق','عقار','وحده سكنيه','بيع شقه','ايجار وحده','محلات','مكاتب','مبنى','مباني','ارض فضاء','ارض زراعيه','تاجير عقار','ايجار عقار','بيع عقار','عقارات','فيلا','وحده اداريه','ايجار تجاري','محل تجاري','ايجار اداري'],'معفى (حسب النص المرفق)',LX+'(28)','بيع وتأجير الأراضى الفضاء والأراضى الزراعية والمبانى والوحدات السكنية وغير السكنية .',
+ 'المنشآت الفندقية وأماكن الإقامة الخاضعة لقوانين خاصة غير مشمولة بتعريف الوحدة السكنية/غير السكنية (لائحة قرار 24/2023 م78 ثانيًا). «السمة التجارية/مكوّن المحل» تخضع 10% (جدول أولاً/15). الصفحة تذكر أن القانون 149/2026 أخضع إيجار المباني التجارية للضريبة — لم أتحقق منه لأنه غير مرفق.',{pg:'ص69',how:2});
+V('e29','ex','النقود الورقية والمعدنية والعملات التذكارية',['نقود','عمله','عملات تذكاريه','عمله معدنيه','عملات ورقيه','اقراص سك'],'معفى',LX+'(29)','النقود الورقية والمعدنية المتداولة، والعملات التذكارية والأقراص الخام المعدة لسكها.','',{am:'ق 3/2022 م3',pg:'ص69'});
+V('e30','ex','سفن أعالي البحار',['سفن','سفينه','سفن اعالي البحار','سفن شحن','ناقله بحريه','باخره'],'معفى (بنود التعريفة 8901 و8902 المحددة)',LX+'(30)','سفن أعالى البحار الواردة قرين البنود المبينة فيما يلى بالتعريفة الجمركية المنسقة …','',{pg:'ص69',how:2});
+V('e31','ex','الطائرات المدنية ومحركاتها وقطع غيارها وخدماتها وتأجيرها',['طائره','طائرات','طيران مدني','محرك طائره','قطع غيار طائرات','تاجير طائره','طياره','تاجير طائرات','خدمات طيران'],'معفى',LX+'(31)','الطائرات المدنية، ومحركاتها، وأجزاؤها، ومكوناتها وقطع غيارها، والمعدات اللازمة لاستخدامها، وكذلك الخدمات التى تقدم لهذه الطائرات داخل الدائرة الجمركية … وكذا تأجير أو استئجار تلك الطائرات …','',{am:'ق 3/2022 م3',pg:'ص69'});
+V('e32','ex','الأجهزة التعويضية والمقاعد المتحركة والأمصال واللقاحات والدم ووسائل تنظيم الأسرة',['كرسي متحرك','كرسي معاقين','اطراف صناعيه','سماعه اذن','سماعات طبيه','حضانه اطفال','غسيل كلوي','اجهزه تعويضيه','مصل','لقاح','لقاحات','دم','اكياس دم','وسائل تنظيم الاسره','لولب','مرشح كلى','حضانات','جهاز غسيل كلى','اطراف'],'معفى',LX+'(32)','مقاعد ذات عجل وأجزاؤها وقطعها المنفصلة، وأعضاء الجسم الصناعية وأجزاؤها، وأجهزة تسجيل السمع للصم … وأجهزة الغسل الكلوى … وحضانات الأطفال، والأمصال واللقاحات والدم ومشتقاته وأكياس جمع الدم ووسائل تنظيم الأسرة.','',{am:'ق 3/2022 م3',pg:'ص69'});
+V('e33','ex','العمليات المصرفية التي تقتصر مباشرتها قانونًا على البنوك',['بنك','بنوك','فوائد','عموله بنكيه','قرض','حساب بنكي','تحويل بنكي','فيزا','مصاريف بنك','عمليات مصرفيه','خدمات بنكيه','بطاقه ائتمان','قرض بنكي'],'معفى',LX+'(33)','العمليات المصرفية التى يقتصر مباشرتها قانونًا على البنوك دون غيرها .','',{pg:'ص70',how:2});
+V('e34','ex','بيع وشراء العملة بشركات الصرافة والبنوك',['صرافه','بيع عمله','شراء عمله','دولار','تحويل عمله','شركه صرافه','صرف عمله','يورو'],'معفى',LX+'(34)','بيع وشراء العملة بشركات الصرافة والبنوك .','',{pg:'ص70'});
+V('e35','ex','خدمات صندوق توفير البريد المصرفية',['صندوق توفير البريد','توفير البريد','دفتر توفير بريد'],'معفى',LX+'(35)','خدمات صندوق توفير البريد المصرفية .','',{pg:'ص70'});
+V('e36','ex','الخدمات المالية غير المصرفية الخاضعة لرقابة الهيئة العامة للرقابة المالية',['تمويل استهلاكي','تمويل متناهي الصغر','تاجير تمويلي','ليزنج','سمسره اوراق ماليه','تخصيم','تمويل عقاري','بورصه','شركه سمسره','اوراق ماليه','فاكتورينج','تداول اسهم','صناديق استثمار','شركه تمويل'],'معفى',LX+'(36)','الخدمات المالية غير المصرفية الخاضعة لإشراف ورقابة الهيئة العامة للرقابة المالية .','',{pg:'ص70',how:2});
+V('e37','ex','خدمات التأمين وإعادة التأمين',['تامين','وثيقه تامين','شركه تامين','اعاده تامين','تامين سياره','تامين صحي','تامين حياه','قسط تامين','تامينات'],'معفى',LX+'(37)','خدمات التأمين وإعادة التامين .','',{pg:'ص70'});
+V('e38','ex','خدمات التعليم والتدريب والبحث العلمي',['تعليم','مدرسه','مدارس','جامعه','جامعات','كورس','تدريب','دروس','دروس خصوصيه','مصاريف مدرسه','حضانه','بحث علمي','دورات','معهد','كليه','مصاريف جامعه','مركز تدريب','سنتر دروس','مصروفات دراسيه'],'معفى',LX+'(38)','خدمات التعليم والتدريب والبحث العلمى .','',{pg:'ص70',how:2});
+V('e39','ex','الخدمات الصحية',['مستشفى','طبيب','دكتور','كشف','عياده','عمليه جراحيه','تحاليل','اشعه','علاج','خدمات صحيه','معمل تحاليل','علاج طبيعي','رعايه صحيه','مصحه','اسنان','دكتور اسنان','عمليه','اقامه مستشفى','مركز طبي'],'معفى (عدا عمليات التجميل والتخسيس لغير الأغراض الطبية)',LX+'(39)','الخدمات الصحية فيما عدا عمليات التجميل والتخسيس لغير الأغراض الطبية .','عمليات التجميل والتخسيس لغير الأغراض الطبية تخضع للسعر العام.',{pg:'ص70',how:2});
+V('e40','ex','النقل البري للأشخاص (بما فيه سيارات الأجرة)',['تاكسي','اوبر','اجره','نقل ركاب','ميكروباص','اتوبيس نقل عام','مترو','نقل بري','اجره تاكسي','كريم','مواصلات','قطار','اتوبيس','نقل جماعي','سياره اجره','توك توك','رحله اوبر','تذكره مترو'],'معفى (عدا النقل السياحي والمكيف بين المحافظات وتأجير السيارات الملاكي)',LX+'(40)','خدمات النقل البرى للأشخاص بما فى ذلك النقل الذى يتم بواسطة سيارات الأجرة عدا خدمات النقل السياحى والنقل المكيف بين المحافظات وتأجير السيارات الملاكى .','النقل المكيف بين المحافظات: ضريبة جدول 5% (أولاً/11). النقل السياحي وتأجير السيارات الملاكي: السعر العام.',{pg:'ص70'});
+V('x-carrent','g14','تأجير السيارات الملاكي والنقل السياحي',['تاجير سيارات','ايجار سياره','رنت كار','تاجير سياره','نقل سياحي','اتوبيس سياحي','ليموزين','رحلات سياحيه','ايجار عربيه'],'السعر العام 14%','استثناء من البند (40) من قائمة الإعفاء','خدمات النقل البرى للأشخاص … عدا خدمات النقل السياحى والنقل المكيف بين المحافظات وتأجير السيارات الملاكى .','',{how:1});
+V('e41','ex','النقل المائي غير السياحي للأشخاص والنقل الجوي للأشخاص',['طيران','تذكره طيران','رحله جويه','نقل جوي','مصر للطيران','تذاكر طيران','نقل نهري','لنش نقل ركاب','عباره','تذكره سفر طيران','شركه طيران'],'معفى',LX+'(41)','النقل المائى غير السياحى للأشخاص، والنقل الجوى للأشخاص.','',{am:'ق 3/2022 م3',pg:'ص70'});
+V('e42','ex','الخدمات التي تؤدى لإنشاء وصيانة دور العبادة والخدمات المجانية لدور العبادة',['مسجد','كنيسه','دار عباده','دور عباده','بناء مسجد','صيانه كنيسه','ترميم مسجد','معبد','بناء كنيسه'],'معفى',LX+'(42)','الخدمات التى تؤدى لإنشاء وصيانة دور العبادة، والخدمات المجانية التى تؤديها دور العبادة .','',{pg:'ص70'});
+V('e43','ex','الخدمات المجانية المبثوثة عبر الإذاعة والتلفزيون',['قناه مجانيه','اذاعه مجانيه','بث مجاني','تلفزيون مجاني','قنوات مفتوحه','راديو'],'معفى',LX+'(43)','الخدمات المجانية التى يتم بثها من خلال الإذاعة والتليفزيون أو أى وسيلة أخرى .','',{pg:'ص70',how:2});
+V('e44','lp','خدمات الإنترنت الأرضي',['انترنت','انترنت ارضي','باقه انترنت','اشتراك انترنت','adsl','فاتوره انترنت','واي فاي','وي انترنت','فايبر','راوتر','انترنت منزلي'],'نص البند: تُعفى لمدة عام من تاريخ العمل بالقانون',LX+'(44)','خدمات الإنترنت الأرضى (تعفى لمدة عام من تاريخ العمل بقانون الضريبة على القيمة المضافة) .',
+ 'القانون عُمل به من 8/9/2016، فمدة العام انقضت (استنتاج مني من النص، ولا يوجد في الملفات المرفقة ما يمدّها). على هذا الأساس تخضع بالسعر العام 14% — راجع المصلحة للتأكيد.',{pg:'ص70',how:1});
+V('e45','ex','الخدمات المكتبية التي تقدمها المكتبات العامة',['مكتبه عامه','خدمات مكتبيه','مكتبه جامعه','مكتبه مدرسه','مكتبه بحثيه'],'معفى',LX+'(45)','الخدمات المكتبية التى تقدمها المكتبات العامة أو التابعة للمنشآت التعليمية أو المراكز البحثية أو الثقافية بكافة أنواعها .','',{pg:'ص70'});
+V('e46','ex','خدمات المتاحف التي يصدر بها قرار من الوزير',['متحف','متاحف','تذكره متحف','دخول متحف'],'معفى بشروط (قرار الوزير)',LX+'(46)','خدمات المتاحف التى يصدر بها قرار من الوزير بناءً على توصية من الوزير المختص .','',{cond:1,pg:'ص70'});
+V('e47','ex','الفنون التشكيلية والتأليف والنشر الأدبي والفني',['لوحه','فن تشكيلي','تاليف','نشر','نشر ادبي','حقوق نشر','دار نشر','رسام','نحت','فنون تشكيليه','لوحات فنيه','مؤلف'],'معفى',LX+'(47)','الفنون التشكيلية، وأعمال التأليف والنشر الأدبى والفنى بأنواعه .','',{pg:'ص70',how:2});
+V('x-news','g14','خدمات وكالات الأنباء',['وكاله انباء','وكالات انباء','خدمات اخباريه'],'السعر العام 14% (ألغي الإعفاء)','البند (48) من قائمة الإعفاء — ملغى بالقانون 157/2025 م6','يُلغى البندان رقما (١٨) و (٤٨) من قائمة السلع والخدمات المعفاة من الضريبة على القيمة المضافة المرافقة لقانون الضريبة على القيمة المضافة المشار إليه.','كان البند: «خدمات وكالات الأنباء» معفاة. بعد الإلغاء تخضع بالسعر العام (استنتاج من م2/م3).',{am:'ق 157/2025 م6'});
+V('e49','ex','خدمات استزراع واستنبات ورعاية الأرض والمحاصيل والحصاد وتوريد العمالة الزراعية',['استزراع','رعايه الارض','حصاد','عماله زراعيه','خدمات زراعيه','حرث','استنبات','رعايه محاصيل','تاجير جرار','توريد عماله زراعيه'],'معفى',LX+'(49)','خدمات استزراع واستنبات ورعاية الأرض والمحاصيل، وعمليات الحصاد وتوريد العمالة الزراعية .','',{pg:'ص70'});
+V('e50','ex','اشتراكات النقابات والهيئات الرياضية والنوادي ومراكز الشباب والجمعيات الأهلية',['اشتراك نقابه','اشتراك نادي','نادي رياضي','اشتراك جمعيه','نقابه','مركز شباب','اشتراك نادي رياضي','جمعيه اهليه','عضويه نادي','عضويه نقابه'],'معفى (بشروط الجهة المشرفة)',LX+'(50)','اشتراكات النقابات والهيئات الخاضعة لقانون الهيئات الرياضية بما فيها النوادى الرياضية ومراكز الشباب التى تشرف عليها وزارة الشباب والرياضة، وكذا اشتراكات الجمعيات الأهلية والاجتماعية التى تشرف عليها وزارة التضامن الاجتماعى .','الصالات الرياضية الخاصة (الجيم) غير واردة بالنص وتخضع بالسعر العام (استنتاج).',{cond:1,pg:'ص70'});
+V('e51','ex','خدمات تجهيز ونقل ودفن الموتى',['دفن','تغسيل','تجهيز موتى','جنازه','مقابر','تربه','خدمات دفن','نقل جثمان','نقل موتى'],'معفى',LX+'(51)','خدمات تجهيز ونقل ودفن الموتى .','',{pg:'ص70'});
+V('x-disabled','g14','السيارات المجهزة طبيًا للمعاقين',['سياره معاقين','سياره مجهزه طبيا','سياره ذوي الهمم','سياره ذوي الاعاقه','سياره مجهزه للمعاقين'],'السعر العام (ألغي البند) مع مراعاة قانون حقوق الأشخاص ذوي الإعاقة 10/2018','البند (52) من قائمة الإعفاء — ملغى بالقانون 3/2022 م6','مع عدم الإخلال بأحكام قانون حقوق الأشخاص ذوى الإعاقة الصادر بالقانون رقم ١٠ لسنة ٢٠١٨، يلغى البند رقم (٥٢) من قائمة السلع والخدمات المعفاة … ','أحكام قانون 10/2018 غير مرفقة بين الملفات.',{am:'ق 3/2022 م6'});
+V('e53','ex','النفايات المتحصل عليها من تدوير القمامة',['تدوير قمامه','نفايات تدوير','تدوير','تدوير نفايات'],'معفى',LX+'(53)','النفايات المتحصل عليها من تدوير القمامة .','',{pg:'ص71'});
+V('e54','ex','الأجهزة الناطقة للمكفوفين وأجهزة برايل والبرمجيات التعليمية للمكفوفين',['برايل','اجهزه مكفوفين','جهاز ناطق','مكفوفين','برمجيات مكفوفين'],'معفى',LX+'(54)','الأجهزة الناطقة للمكفوفين والأجهزة التى تعمل بطريقة برايل للمكفوفين والبرمجيات والوسائل التعليمية الخاصة بالمكفوفين .','',{pg:'ص71'});
+V('e55','ex','الأدوية والمواد الداخلة في إنتاجها',['دواء','ادويه','دوا','حبوب دواء','حقن','شراب دواء','مضاد حيوي','انسولين','صيدليه','مواد فعاله','مضاد حيوي','مسكن','بنادول','قرص','علاج دوائي','دواء مستورد','دواء محلي'],'معفى',LX+'(55)','(أ) الأدوية. (ب) المواد الداخلة فى إنتاج الأدوية بناءً على قرار يصدر من هيئة الدواء المصرية.','كان البند يفرّق بين المحلي والمستورد قبل 2022. المستلزمات الطبية غير الدوائية والمكملات قد لا تندرج تحت «الأدوية» — راجع التصنيف.',{am:'ق 3/2022 م3',pg:'ص71'});
+V('e56','ex','الخدمات التعليمية للمدارس والجامعات ذات المناهج الخاصة (الدولية)',['مدارس دوليه','جامعات دوليه','مناهج دوليه','igcse','american diploma','british school','مدرسه دوليه','انترناشيونال'],'معفى',LX+'(56)','الخدمات التعليمية التى يقوم بها الأقسام والمدارس والمعاهد والكليات والجامعات التى تقوم بتدريس مناهج ذات طبيعة خاصة (الدولية) .','',{pg:'ص71'});
+V('e57','ex','الإعلانات الخاصة بالتبرعات للعلاج والرعاية الطبية',['اعلان تبرعات','تبرعات علاج','اعلان حمله تبرع','تبرع مستشفى','اعلان تبرع'],'معفى (هذا النوع فقط)',LX+'(57)','الإعلانات الخاصة بالتبرعات للعلاج والرعاية الطبية بالمستشفيات الأهلية غير الهادفة للربح والمعاهد الحكومية .','باقي الإعلانات تخضع بـ14% (ق3/2022 م5).',{am:'ق 3/2022 م3 ← ق 157/2025 م4',how:1});
+V('e58','ex','الخدمات التي تؤديها هيئة قناة السويس للسفن العابرة',['قناه السويس','مقابل عبور','عبور سفن','رسوم قناه السويس','عبور قناه'],'معفى',LX+'(58)','الخدمات التى تؤديها هيئة قناة السويس للسفن العابرة بها بما فيها مقابل العبور …','',{am:'ق 3/2022 م4'});
+
+/* ---------- استثناءات صريحة من بنود الإعفاء (تخضع بالسعر العام) ---------- */
+V('x-semolina','g14','المكرونة التي يدخل في صناعتها السيمولينا',['مكرونه سيمولينا','سيمولينا','مكرونه بالسيمولينا','مكرونه فاخره سيمولينا'],'السعر العام 14%','استثناء من البند (7) من قائمة الإعفاء','المكرونة، عدا المكرونة التى يدخل فى صناعتها السيمولينا .','الاستثناء بالنص: كل مكرونة يدخل في صناعتها السيمولينا لا يشملها الإعفاء.',{pg:'ص68'});
+V('x-flour','g14','الدقيق الفاخر أو المخمر المستورد',['دقيق فاخر مستورد','دقيق مخمر مستورد','دقيق مستورد','دقيق فاخر'],'السعر العام 14%','استثناء من البند (5) من قائمة الإعفاء','منتجات المطاحن فيما عدا الدقيق الفاخر المستورد أو المخمر المستورد من الخارج.','',{am:'ق 3/2022 م3',pg:'ص68'});
+V('x-egg','g14','البيض المبستر',['بيض مبستر','بيض سائل مبستر','بيض مبستر معبأ'],'السعر العام 14%','استثناء من البند (3) من قائمة الإعفاء','البيض عدا المبستر منه .','',{pg:'ص68'});
+V('x-caviar','g14','الكافيار وأبداله وباقي الأسماك المدخنة (غير الرنجة)',['كافيار','سلمون مدخن','سمك مدخن','اسماك مدخنه','سمك سالمون مدخن'],'السعر العام 14%','استثناء من البند (11) من قائمة الإعفاء','محضرات وأصناف محفوظة أو مصنعة أو مجهزة من الأسماك والرنجة المدخنة فيما عدا الكافيار وأبداله وباقى أنواع الأسماك المدخنة .','',{pg:'ص68'});
+V('x-juice','g14','العصائر ومركزاتها',['عصير','عصائر','مركزات عصير','عصير فواكه','عصير معبأ','عصير جاهز','عصير برتقال معبأ','نكتار'],'السعر العام 14%','استثناء من البند (14) من قائمة الإعفاء','الخضر والفواكه المصنعة محلياً عدا العصائر ومركزاتها.','العصائر لا يشملها إعفاء الخضر والفواكه المصنعة. لا يوجد لها بند جدول في المصادر المرفقة، فالخضوع بالسعر العام استنتاج من م2 و م3. عصير الفاكهة الطازج المباع بحالته الطبيعية قد يُناقَش تحت بند المنتجات الزراعية — راجع المصلحة.',{am:'ق 3/2022 م3',how:1});
+V('x-cosmetic','g14','عمليات التجميل والتخسيس لغير الأغراض الطبية',['عمليات تجميل','تجميل','تخسيس','نحت جسم','بوتوكس','فيلر','ليزر تجميل','شد وجه','عمليه تجميل','عيادة تجميل'],'السعر العام 14%','استثناء من البند (39) من قائمة الإعفاء','الخدمات الصحية فيما عدا عمليات التجميل والتخسيس لغير الأغراض الطبية .','التجميل لأغراض طبية (ترميمي/علاجي) تبقى ضمن الخدمات الصحية المعفاة.',{pg:'ص70'});
+
+/* ---------- سلع وخدمات شائعة غير واردة بالاسم: الأصل الخضوع بالسعر العام (استنتاج من الغياب) ---------- */
+V('x-unlisted','g14','سلع وخدمات شائعة غير واردة بالاسم في الجدول ولا في قائمة الإعفاء',
+ ['موبايل','جهاز موبايل','هاتف محمول','تليفون محمول','لابتوب','كمبيوتر','حاسب الي','ملابس','هدوم','احذيه','جزمه','حذاء','اثاث','موبيليا','عفش','غسالات','غساله','بوتاجاز جهاز','سخان','مروحه','ميكروويف','خلاط','اجهزه كهربائيه','اجهزه منزليه','اكسسوارات','العاب','لعب اطفال','فندق','اقامه فندقيه','حجز فندق','سياحه','رحلات','شنط','ساعه','نظارات','اطارات','قطع غيار سيارات','زيوت سيارات','عدد يدويه','حديد تسليح','اسمنت','سيراميك','دهانات','خشب','زجاج','بلاستيك','مفروشات','سجاد','مراتب','تصوير','طباعه','برمجيات','تطبيقات','اشتراك نتفليكس','نتفليكس','اشتراكات رقميه','استضافه مواقع','خدمات سحابيه','تنظيف','حراسه','نقل بضائع','شحن','توصيل','خدمات لوجستيه','صيانه','تصميم'],
+ 'السعر العام 14% (استنتاج من عدم وجود اسمه أو وصفه في القوائم)','المادة (2) والمادة (3) من القانون',
+ 'تفرض الضريبة على السلع والخدمات بما فى ذلك السلع والخدمات المنصوص عليها فى الجدول المرافق لهذا القانون، سواء كانت محلية أو مستوردة، فى كافة مراحل تداولها، إلا ماستثنى بنص خاص. … يكون السعر العام للضريبة على السلع والخدمات (١٤٪) اعتبارًا من العام المالى ٢٠١٨/٢٠١٧.',
+ 'هذه النتيجة قائمة على أن اسم المنتج لا يرد في قائمة الإعفاء ولا في الجدول. أي صنف يندرج تحت وصف بند معفى أو جدولي (حسب التصنيف الجمركي) يأخذ معاملة ذلك البند. بعض الخدمات (نقل البضائع، الاتصالات الأرضية…) مذكورة في اللائحة كخدمات مستمرة (قرار 417/2025 م43) لكن ذلك ينظّم التوقيت لا الخضوع.',{how:3,pg:'ص13'});
+
+/* ---------- إعفاءات خاصة من مواد القانون ---------- */
+V('s-dip','ex','مشتريات البعثات الدبلوماسية والقنصلية (بشرط المعاملة بالمثل)',['سفاره','بعثه دبلوماسيه','قنصليه','دبلوماسي','سلك دبلوماسي','اعفاء سفارات'],'معفى بشروط (المعاملة بالمثل)','المادة (23) من القانون + لائحة قرار 24/2023 م31',
+ 'يعفى من الضريبة وبشرط المعاملة بالمثل وفي حدود هذه المعاملة ووفقًا لبيانات وزارة الخارجية: ١- ما يشترى أو يستورد للاستعمال الشخصى لأعضاء السلكين الدبلوماسى والقنصلى الأجانب … ٢- ما يشترى أو يستورد للسفارات والمفوضيات والقنصليات غير الفخرية للاستعمال الرسمى عدا المواد الغذائية والمشروبات الروحية والأدخنة.','يحظر التصرف في المعفى في غير غرضه 5 سنوات دون إخطار المصلحة وسداد الضريبة (م24).',{cond:1,pg:'ص28'});
+V('s-def','ex','سلع وخدمات التسليح للدفاع والأمن القومي',['تسليح','دفاع','امن قومي','اسلحه','معدات عسكريه'],'معفى','المادة (28) من القانون','تعفى من الضريبة كافة السلع والمعدات والأجهزة والخدمات المعنية فى هذا القانون اللازمة لأغراض التسليح للدفاع والأمن القومى وكذلك الخامات ومستلزمات الإنتاج والأجزاء الداخلة فى تصنيعها.','',{pg:'ص29'});
+V('s-gift','ex','الهبات والتبرعات للجهاز الإداري للدولة وما يُستورد للأغراض العلمية والتعليمية والثقافية',['هبات','تبرعات','هدايا للدوله','استيراد علمي','استيراد تعليمي','استيراد ثقافي','معهد بحث علمي'],'يجوز الإعفاء بقرار من الوزير','المادة (27) بعد استبدالها بالقانون 3/2022',
+ 'يجوز بقرار من الوزير بالاتفاق مع الوزير المختص إعفاء بعض السلع والخدمات من الضريبة فى الحالتين الآتيتين: ١ - الهبات والتبرعات والهدايا للجهاز الإدارى للدولة أو وحدات الإدارة المحلية أو الهيئات العامة. ٢ - ما يستورد للأغراض العلمية أو التعليمية أو الثقافية بواسطة المعاهد العلمية والتعليمية ومعاهد البحث العلمى.','الإعفاء جوازي بقرار وزاري، وليس تلقائيًا.',{cond:1,am:'ق 3/2022 م1'});
+V('s-pers','ex','الأمتعة الشخصية للقادمين والعينات والمهمات المعاد استيرادها',['امتعه شخصيه','امتعه قادمين','عينات تحليل','نياشين','ميداليات','جوائز رياضيه','اعاده استيراد','مهمات معاده'],'معفى بالحدود والشروط التي تحددها اللائحة','المادة (26) من القانون',
+ 'يعفى من الضريبة فى الحدود وبالشروط والأوضاع التى تحددها اللائحة التنفيذية ما يأتى: ١- العينات التى تستهلك فى أغراض التحليل بالمعامل الحكومية. ٢- الأشياء والمتعلقات الشخصية المجردة من أية صفة تجارية كالنياشين والميداليات والجوائز الرياضية والعلمية. ٣- المهمات التى ترد من الخارج دون قيمة بدل تالف أو ناقص … ٤- الأمتعة الشخصية الخاصة بالقادمين من الخارج. ٥- الأشياء التى تم سداد الضريبة عليها وصدرت للخارج ثم أعيد استيرادها بذاتها …','',{cond:1,pg:'ص29'});
+
+
+/* ---------- ملحق: نصوص حرفية من قرارات وزير المالية ---------- */
+(function(){
+  var X = {
+   't2-3c':'نص قرار وزير المالية 417/2025 م45 مكررًا: «في تطبيق أحكام الفقرة الثانية من المادة الثالثة من القانون رقم ١٥٧ لسنة ٢٠٢٥ بتعديل بعض أحكام قانون الضريبة على القيمة المضافة المشار إليه، تُزاد ضريبة الجدول المنصوص عليها في المسلسلين رقمي (٣/ج، د) و(٤) من البند "ثانياً" من جدول السلع والخدمات المرافق لقانون الضريبة على القيمة المضافة المشار إليه بنسبة (١٥٪) سنوياً بدءاً من ٢٠٢٦/١/١ ولمدة ثلاث سنوات، وتُخفض هذه النسبة إلى (١٢٪) سنوياً بدءاً من ٢٠٢٩/١/١».',
+   't1-9':'نص قرار وزير المالية 418/2025 م1: «وبالنسبة لعقود المقاولات وأعمال التشييد والبناء المبرمة والصادر لها مستخلص معتمد من الاستشاري أو فاتورة إلكترونية أو إيصال إلكتروني قبل العمل بأحكام القانون رقم ١٥٧ لسنة ٢٠٢٥ … والمستمر تنفيذها بعد صدور هذا القانون، تكون القيمة المتخذة أساساً لحساب الضريبة على القيمة المضافة لتلك العقود، بواقع ٣٦٪ من إجمالي قيمة الفاتورة الصادرة بناءً على المستخلص المعتمد من الاستشاري … مع عدم إعمال قواعد الخصم الضريبي المنصوص عليها قانوناً.» — ويُعد تعاقداً جديداً «كل تجديد لعقد قائم في تاريخ العمل بالقانون أو زيادة في حجم الأعمال بما يجاوز النسبة المنصوص عليها في العقد».',
+   'r5-mach':'نص لائحة قرار 24/2023 م34 مكررًا (بند 4 و6): «يكون تعليق أداء الضريبة لمدة سنة واحدة، تبدأ من تاريخ الإفراج عن الآلات والمعدات من الجمرك أو من تاريخ شرائها من السوق المحلية … إذا ثبت للمصلحة أنه تم استخدام تلك الآلات والمعدات في الإنتاج الصناعي خلال مدة تعليق أداء الضريبة … تعفى هذه الآلات والمعدات من الضريبة.» وأضاف قرار 417/2025: «وفي حالة شراء أو ورود خطوط الإنتاج مفككة أو على شحنات مجزأة، فيبدأ تطبيق أداء الضريبة من تاريخ شراء آخر جزء من السوق المحلية أو من تاريخ الإفراج عن آخر شحنة من الجمرك».',
+   'z-free':'نص لائحة قرار 24/2023 م9 أولاً: «يخضع للضريبة بسعر (صفر) ما تستورده من الخارج مشروعات المناطق والمدن والأسواق الحرة والمناطق الاقتصادية ذات الطبيعة الخاصة من سلع وخدمات لازمة لمزاولة النشاط المرخص لها داخل تلك الأماكن … وذلك عدا سيارات الركوب.» وثالثاً: «تستحق الضريبة على السلع أو الخدمات الخاضعة للضريبة الواردة للاستهلاك المحلى داخل المناطق والمدن والأسواق الحرة … عند الإفراج عنها من الجمارك.»'
+  };
+  X['t2-3d']=X['t2-3c']; X['t2-4']=X['t2-3c'];
+  VI.forEach(function(it){ if(X[it.id]) it.text += '\n\n' + X[it.id]; });
+})();
+
+/* ============================================================
+   محرك مطابقة الخضوع
+   ============================================================ */
+var VAT_GENERIC = null;
+var VAT_IDX = null;
+function vatBuild(){
+  VAT_IDX = VI.map(function(it){
+    var ph = it.kws.concat([it.title]).map(function(k){ return toks(k); }).filter(function(a){ return a.length; });
+    return {phr: ph};
+  });
+  var g = {};
+  ['خاضع','خاضعه','يخضع','تخضع','معفي','معفى','معفاه','معفيه','ضريبه','ضريبة','القيمه المضافه','قيمه مضافه','vat','عليه','عليها','عليهم','هل','منتج','سلعه','خدمه','سلع','خدمات','بيع','شراء','يتحاسب','بتتحاسب','بيتحاسب','تتحاسب','حاسب','حساب','فيها','فيه','نسبه','نسب','سعر','كام','كم','يبقي','تبقي','يكون','تكون','ايه','اي','حكم','حكمه','بند','القانون','قانون','مصر','مصري','المصريه','ضرايب','ضرائب','نوع','عاوز','عايز','اعرف','لو','عندي','عندنا','محتاج','ينفع','يعتبر','تعتبر','اعتبار','حاله','وضع','وضعه','وضعها','تاجر','مصنع','استيراد','مستورد','اشتري','اشتريت','ابيع','بابيع','بشتري','بستورد','اورد','بورد','بتخضع','بيخضع','ليها','ليه','له','لها'].forEach(function(w){ toks(w).forEach(function(t){ g[t]=1; }); });
+  VAT_GENERIC = g;
+}
+function vatCue(q){
+  var n = ' '+norm(q)+' ';
+  var strong = /(خاضع|خاضعه|يخضع|تخضع|بتخضع|بيخضع|معفي|معفى|معفاه|معفيه|معفيين|قيمه مضافه| vat |فات |اعفاء|اعفاءات|الجدول)/.test(n);
+  var weak = /(ضريب|ضرايب|ضرائب|بتتحاسب|يتحاسب|عليه كام|عليها كام)/.test(n);
+  return {strong:strong, weak:weak};
+}
+/* يعيد {cue, prod:[tokens], hits:[{i,score}]} */
+function vatSearch(q){
+  if(!VAT_IDX) vatBuild();
+  var qt = toks(q);
+  var prod = qt.filter(function(t){ return !VAT_GENERIC[t]; });
+  var qset = {}; prod.forEach(function(t){ qset[t]=1; });
+  var hits = [];
+  for(var i=0;i<VI.length;i++){
+    var best = 0;
+    var ph = VAT_IDX[i].phr;
+    for(var p=0;p<ph.length;p++){
+      var a = ph[p], ok = true, cnt = 0;
+      for(var k=0;k<a.length;k++){
+        var t = a[k];
+        if(qset[t]){ cnt++; continue; }
+        var f = false;
+        if(t.length>=5){
+          for(var u=0;u<prod.length;u++){ if(prod[u].length>=5 && lev1(t,prod[u])){ f = true; break; } }
+        }
+        if(f){ cnt += 0.4; continue; }
+        ok = false; break;
+      }
+      if(ok && cnt>0){
+        var sc = cnt + (a.length>1 ? 0.5 : 0);
+        if(sc>best) best = sc;
+      }
+    }
+    if(best>0) hits.push({i:i, score:best + (VI[i].how===1?0.05:0)});
+  }
+  hits.sort(function(a,b){ return b.score-a.score; });
+  if(hits.length){
+    var top = hits[0].score;
+    hits = hits.filter(function(h){ return h.score >= top*0.6; }).slice(0,3);
+  }
+  return {cue:vatCue(q), prod:prod, hits:hits};
+}
+if(typeof module!=='undefined'){ module.exports.VI = VI; module.exports.vatSearch = vatSearch; module.exports.VAT_ASOF = VAT_ASOF; }
+
+
+
+/* ============================================================
+   واجهة المستخدم
+   ============================================================ */
+if(typeof document!=='undefined'){
+(function(){
+  var $ = function(id){return document.getElementById(id);};
+  var CHIPS = ['شرائح ضريبة الدخل','ضريبة بيع شقة','ضريبة القيمة المضافة كام','ضريبة الشركات','الفاتورة الإلكترونية','ضريبة المشروعات الصغيرة','الضريبة العقارية','ضريبة توزيعات الأرباح','الحزمة الثانية 2026'];
+  var chips = $('chips');
+  CHIPS.forEach(function(c){
+    var b=document.createElement('button'); b.type='button'; b.className='chip'; b.textContent=c;
+    b.addEventListener('click',function(){ $('q').value=c; ask(c); });
+    chips.appendChild(b);
+  });
+
+  /* تبويبات */
+  function showTab(name){
+    document.querySelectorAll('nav.tabs button').forEach(function(b){ b.setAttribute('aria-selected', b.dataset.tab===name?'true':'false'); });
+    document.querySelectorAll('section.panel').forEach(function(p){ p.classList.toggle('on', p.id==='tab-'+name); });
+  }
+  document.querySelectorAll('nav.tabs button').forEach(function(b){ b.addEventListener('click',function(){showTab(b.dataset.tab);}); });
+
+  /* مظهر */
+  var themeBtn = $('themeBtn');
+  try{ var saved = localStorage.getItem('tax-theme'); if(saved) document.documentElement.setAttribute('data-theme',saved); }catch(e){}
+  themeBtn.addEventListener('click',function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    var dark = cur ? cur==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try{ localStorage.setItem('tax-theme', next); }catch(e){}
+  });
+
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function lawOf(k){ for(var i=0;i<LAWS.length;i++) if(LAWS[i].k===k) return LAWS[i]; return null; }
+
+  function entryCard(d){
+    var law = lawOf(d.law);
+    var badge = d.v ? '<span class="badge ok">✔ موثّق بمصادر</span>' : '<span class="badge warn">⚠ راجِع قبل الاعتماد</span>';
+    var meta = '';
+    if(law) meta += 'القانون: <b>'+esc(law.name)+'</b> ('+esc(law.no)+')';
+    if(d.src) meta += '<br>المصدر: '+esc(d.src);
+    var div = document.createElement('div'); div.className='card';
+    div.innerHTML = '<h2>'+esc(d.title)+badge+'</h2><div class="answer">'+d.html+'</div>'+(meta?'<div class="meta">'+meta+'</div>':'')+
+      '<div style="margin-top:10px"><button type="button" class="btn alt small" data-copy="1">نسخ الإجابة كنص</button></div>';
+    div.querySelector('[data-copy]').addEventListener('click',function(ev){
+      var txt = d.title+'\n'+div.querySelector('.answer').innerText+'\n(دليل الضرائب المصرية – معلومات عامة وليست استشارة)';
+      var btn = ev.currentTarget;
+      if(navigator.clipboard){ navigator.clipboard.writeText(txt).then(function(){btn.textContent='تم النسخ ✓'; setTimeout(function(){btn.textContent='نسخ الإجابة كنص';},1500);}); }
+    });
+    return div;
+  }
+
+  function showEntry(idx, query){
+    var out = $('answer'); out.innerHTML='';
+    showTab('ask');
+    out.appendChild(entryCard(KB[idx]));
+    if(query!==undefined){
+      var rel = search(query).filter(function(r){return r.i!==idx;}).slice(0,4);
+      if(rel.length){
+        var box = document.createElement('div'); box.className='card';
+        box.innerHTML='<h3>أسئلة قريبة</h3><div class="related"></div>';
+        var rl = box.querySelector('.related');
+        rel.forEach(function(r){
+          var b=document.createElement('button'); b.type='button'; b.textContent=KB[r.i].title;
+          b.addEventListener('click',function(){ showEntry(r.i, query); window.scrollTo({top:0,behavior:'smooth'}); });
+          rl.appendChild(b);
+        });
+        out.appendChild(box);
+      }
+    }
+  }
+
+  function ask(q){
+    q = (q||'').trim();
+    var out = $('answer');
+    if(!q){ out.innerHTML=''; return; }
+    showTab('ask');
+    try{ history.replaceState(null,'','?q='+encodeURIComponent(q)); }catch(e){}
+    var res = search(q);
+    var vs = vatSearch(q);
+    var kbStrong = res.length && res[0].score >= 6;
+    var prodQ = '';
+    if(!vs.hits.length && vs.cue.strong){
+      prodQ = q.split(/\s+/).filter(function(w){ return toks(w).some(function(t){ return !VAT_GENERIC[t]; }); }).join(' ');
+    }
+    var kbProd = prodQ ? search(prodQ) : [];
+    var kbProdStrong = kbProd.length && kbProd[0].score >= 4;
+    if((vs.hits.length && (vs.cue.strong || !kbStrong)) || (prodQ && !kbProdStrong)){
+      vatRender(out, q, res, vs);
+      return;
+    }
+    out.innerHTML='';
+    if(!res.length || res[0].score < 2.2){
+      var c = document.createElement('div'); c.className='card';
+      c.innerHTML = '<h2>مش لاقي إجابة دقيقة لسؤالك</h2><p>جرّب تكتب السؤال بكلمات تانية أو اختار من الاقتراحات دي:</p><div class="related"></div>';
+      var rl = c.querySelector('.related');
+      ['شرائح ضريبة الدخل','سعر ضريبة القيمة المضافة','ضريبة التصرفات العقارية','ضريبة الشركات','ضريبة المشروعات الصغيرة'].forEach(function(s){
+        var b=document.createElement('button'); b.type='button'; b.textContent=s; b.addEventListener('click',function(){ $('q').value=s; ask(s); }); rl.appendChild(b);
+      });
+      out.appendChild(c);
+      return;
+    }
+    showEntry(res[0].i, q);
+  }
+  $('qform').addEventListener('submit',function(e){ e.preventDefault(); ask($('q').value); });
+
+
+  /* ===== فحص الخضوع للقيمة المضافة ===== */
+  var VST = {
+    ex:['معفى من ضريبة القيمة المضافة','v-ex'], z0:['خاضع للضريبة بسعر صفر (0%)','v-ex'],
+    r5:['خاضع للقيمة المضافة بسعر 5%','v-tax'], g14:['خاضع للقيمة المضافة بالسعر العام (14%)','v-tax'],
+    t1:['خاضع لضريبة الجدول فقط (لا تُضاف عليه 14%)','v-tax'], t2:['خاضع للقيمة المضافة 14% + ضريبة جدول','v-tax'],
+    lp:['إعفاء مؤقت انتهت مدته حسب نص البند (يخضع غالبًا بالسعر العام)','v-tax']
+  };
+  function vatCard(it){
+    var st = VST[it.st] || VST.g14;
+    var label = (it.st==='ex' && it.cond) ? 'معفى بشروط' : st[0];
+    var badge = it.how===1 ? '<span class="badge ok">✔ نص صريح</span>' : (it.how===3 ? '<span class="badge warn">⚠ استنتاج: غير وارد بالقوائم</span>' : '<span class="badge warn">⚠ اندراج تحت وصف عام</span>');
+    var src = '<b>السند:</b> '+esc(it.ref)+' — '+esc(L67);
+    if(it.am) src += '<br><b>مُعدَّل/مُلغى بـ:</b> '+esc(it.am);
+    if(it.pg) src += '<br><b>موضعه في المصدر المرفق:</b> '+esc(it.pg);
+    var d = document.createElement('div'); d.className='card';
+    d.innerHTML = '<h2>'+esc(it.title)+badge+'</h2>'+
+      '<div class="verdict '+st[1]+'"><b>'+esc(label)+'</b><div class="vrate">'+esc(it.rate)+'</div></div>'+
+      '<div style="font-size:.85rem;color:var(--muted)">نص البند كما ورد في القانون:</div>'+
+      '<blockquote class="vtext">'+esc(it.text)+'</blockquote>'+
+      (it.note?'<div class="note">'+esc(it.note)+'</div>':'')+
+      '<div class="vsrc">'+src+'</div>'+
+      '<div class="vsrc"><b>افتح المصدر (PDF):</b> '+vatSrcLinks(it).map(function(l){ return '<a href="'+l.href+'" target="_blank" rel="noopener">'+esc(l.text)+'</a>'; }).join(' · ')+'</div>';
+    return d;
+  }
+  function vatFallback(q){
+    var g = VI[0];
+    var d = document.createElement('div'); d.className='card';
+    d.innerHTML = '<h2>«'+esc(q)+'» — غير وارد بالاسم في الجدول ولا في قائمة الإعفاءات</h2>'+
+      '<div class="verdict v-tax"><b>الأصل: خاضع للقيمة المضافة بالسعر العام (14%)</b><div class="vrate">ما لم يندرج المنتج تحت وصف أحد البنود المعفاة أو بنود الجدول</div></div>'+
+      '<div style="font-size:.85rem;color:var(--muted)">النص العام:</div><blockquote class="vtext">'+esc(g.text)+'</blockquote>'+
+      '<div class="note">عدم وجود اسم المنتج في القوائم لا يعني التأكد من الخضوع: قد يدخل تحت وصف عام (مثل «منتجات زراعية بحالتها الطبيعية» أو «الأدوية»). جرّب اسمًا بديلًا أو راجع التصنيف الجمركي للسلعة (القانون يسترشد به في تحديد مسمى السلعة — م1).</div>'+
+      '<div class="vsrc"><b>السند:</b> '+esc(g.ref)+' — '+esc(L67)+' · '+esc(g.pg)+'</div><div class="vsrc"><b>افتح المصدر (PDF):</b> <a href="sources/guide-2020.pdf#page=13" target="_blank" rel="noopener">دليل المصلحة 2020 — ص13</a></div>';
+    return d;
+  }
+  function vatRender(target, q, kbres, vs){
+    vs = vs || vatSearch(q);
+    target.innerHTML='';
+    if(vs.hits.length){
+      vs.hits.forEach(function(h){ target.appendChild(vatCard(VI[h.i])); });
+    } else {
+      target.appendChild(vatFallback(q));
+    }
+    var asof = document.createElement('div'); asof.className='meta'; asof.textContent = VAT_ASOF+'. القانون 149 لسنة 2026 (إن عدّل هذا البند) غير مضمَّن في الملفات المرفقة.';
+    target.appendChild(asof);
+    if(kbres && kbres.length && kbres[0].score>=2.2){
+      var box = document.createElement('div'); box.className='card';
+      box.innerHTML='<h3>إجابات عامة قريبة</h3><div class="related"></div>';
+      var rl = box.querySelector('.related');
+      kbres.slice(0,3).forEach(function(r){
+        var b=document.createElement('button'); b.type='button'; b.textContent=KB[r.i].title;
+        b.addEventListener('click',function(){ showEntry(r.i, q); window.scrollTo({top:0,behavior:'smooth'}); });
+        rl.appendChild(b);
+      });
+      target.appendChild(box);
+    }
+  }
+  var vqEl = $('vq'), vOut = $('vatOut');
+  $('vasof').textContent = VAT_ASOF+'. المعاملة الواردة هنا مبنية على النصوص المرفقة فقط (القانون 67/2016 بدليل مصلحة الضرائب ديسمبر 2020 + التعديلات حتى 2025).';
+  ['سجائر','عيش','بيبسي','تاكسي','لبن أطفال','تكييف','سيارة 1600','إيجار شقة','مقاولات','دواء','كتب مدرسية','موبايل','بنزين','مياه معبأة'].forEach(function(c){
+    var b=document.createElement('button'); b.type='button'; b.className='chip'; b.textContent=c;
+    b.addEventListener('click',function(){ vqEl.value=c; vatRender(vOut,c); });
+    $('vchips').appendChild(b);
+  });
+  $('vform').addEventListener('submit',function(e){ e.preventDefault(); var q=vqEl.value.trim(); if(q) vatRender(vOut,q); });
+  var BG = [
+    ['قائمة السلع والخدمات المعفاة',['ex','lp']],
+    ['الجدول (أولاً): ضريبة جدول فقط',['t1']],
+    ['الجدول (ثانياً): ضريبة جدول + 14%',['t2']],
+    ['أسعار أخرى واستثناءات (صفر / 5% / 14%)',['z0','r5','g14']]
+  ];
+  BG.forEach(function(g){
+    var det = document.createElement('details'); det.className='vgrp';
+    var items = VI.map(function(it,i){return {it:it,i:i};}).filter(function(x){ return g[1].indexOf(x.it.st)>=0; });
+    det.innerHTML='<summary>'+esc(g[0])+' ('+items.length+')</summary><div class="related"></div>';
+    var rl = det.querySelector('.related');
+    items.forEach(function(x){
+      var b=document.createElement('button'); b.type='button'; b.className='vrow';
+      b.innerHTML='<span>'+esc(x.it.title)+'</span><small>'+esc(x.it.ref.replace(LX,'بند '))+'</small>';
+      b.addEventListener('click',function(){ vOut.innerHTML=''; vOut.appendChild(vatCard(x.it)); showTab('vat'); vOut.scrollIntoView({behavior:'smooth'}); });
+      rl.appendChild(b);
+    });
+    $('vbrowse').appendChild(det);
+  });
+
+
+  SRC.forEach(function(s){
+    var a=document.createElement('a'); a.className='vrow'; a.href=s.f; a.target='_blank'; a.rel='noopener'; a.style.textDecoration='none';
+    a.innerHTML='<span>'+esc(s.t)+'</span><small>فتح ↗</small>';
+    $('vsources').appendChild(a);
+  });
+  SRC.forEach(function(s){ var li=document.createElement('li'); li.innerHTML='<a href="'+s.f+'" target="_blank" rel="noopener">'+esc(s.t)+'</a>'; $('footSrc').appendChild(li); });
+  /* تبويب القوانين */
+  var grid = $('lawsGrid');
+  LAWS.forEach(function(L){
+    var card = document.createElement('div'); card.className='card';
+    var items = []; KB.forEach(function(d,i){ if(d.law===L.k) items.push(i); });
+    card.innerHTML = '<div class="law-head" role="button" tabindex="0"><div><div class="law-no">'+esc(L.no)+'</div><h3>'+esc(L.name)+'</h3><div style="color:var(--muted);font-size:.92rem">'+esc(L.desc)+'</div></div><span aria-hidden="true">▾</span></div><div class="law-list"></div>';
+    var list = card.querySelector('.law-list');
+    if(!items.length){ list.innerHTML='<div class="empty">لا توجد أسئلة مفصّلة بعد لهذا القانون.</div>'; }
+    items.forEach(function(i){
+      var b=document.createElement('button'); b.type='button'; b.className='chip'; b.style.textAlign='right'; b.textContent=KB[i].title;
+      b.addEventListener('click',function(){ showEntry(i); window.scrollTo({top:0,behavior:'smooth'}); });
+      list.appendChild(b);
+    });
+    var head = card.querySelector('.law-head');
+    var toggle = function(){ list.classList.toggle('on'); };
+    head.addEventListener('click',toggle);
+    head.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();} });
+    grid.appendChild(card);
+  });
+
+  /* الحاسبات */
+  function num(id){ var v = parseFloat($(id).value); return isFinite(v)&&v>=0 ? v : NaN; }
+  function kv(a,b){ return '<div class="kv"><span>'+a+'</span><b>'+b+'</b></div>'; }
+  $('c1_go').addEventListener('click',function(){
+    var sal=num('c1_sal'); if(isNaN(sal)){ $('c1_out').innerHTML='<div class="result">أدخل المرتب الشهري.</div>'; return; }
+    var extra=num('c1_extra')||0, ins=(num('c1_ins')||0)*12;
+    var annual=sal*12+extra, net=Math.max(0, annual-ins-20000);
+    var r=incomeTax(net), eff = annual>0 ? r.tax/annual*100 : 0;
+    var rows = r.rows.map(function(x){return '<tr><td>'+fmt(x.from)+' – '+fmt(x.to)+'</td><td>'+(x.rate*100)+'%</td><td>'+fmt(x.tax)+'</td></tr>';}).join('');
+    $('c1_out').innerHTML = '<div class="result">'+kv('إجمالي الدخل السنوي',fmt(annual))+kv('التأمينات السنوية',fmt(ins))+kv('الإعفاء الشخصي','20,000')+kv('صافي الدخل الخاضع',fmt(net))+
+      '<div style="margin-top:6px">الضريبة السنوية: <b class="big">'+fmt(r.tax)+'</b> جنيه</div>'+kv('تقريبًا شهريًا',fmt(r.tax/12))+kv('صافي المرتب الشهري تقريبًا بعد الضريبة',fmt(sal-r.tax/12-(num('c1_ins')||0)))+kv('النسبة الفعلية من الإجمالي',eff.toFixed(2)+'%')+
+      (rows?'<table class="t"><tr><th>الشريحة</th><th>المعدل</th><th>الضريبة</th></tr>'+rows+'</table>':'')+'</div>';
+  });
+  $('c2_go').addEventListener('click',function(){
+    var a=num('c2_amt'); if(isNaN(a)){ $('c2_out').innerHTML='<div class="result">أدخل المبلغ.</div>'; return; }
+    var rate=parseFloat($('c2_rate').value)/100, mode=$('c2_mode').value, base, tax, total;
+    if(mode==='add'){ base=a; tax=a*rate; total=a+tax; } else { total=a; base=a/(1+rate); tax=total-base; }
+    $('c2_out').innerHTML='<div class="result">'+kv('المبلغ قبل الضريبة',fmt(base))+kv('قيمة الضريبة',fmt(tax))+kv('الإجمالي بعد الضريبة','<span class="big">'+fmt(total)+'</span>')+'</div>';
+  });
+  $('c3_go').addEventListener('click',function(){
+    var p=num('c3_price'); if(isNaN(p)){ $('c3_out').innerHTML='<div class="result">أدخل ثمن البيع.</div>'; return; }
+    $('c3_out').innerHTML='<div class="result">'+kv('ثمن البيع',fmt(p))+kv('الضريبة 2.5% (على البائع)','<span class="big">'+fmt(p*0.025)+'</span>')+'<div style="font-size:.85rem;color:var(--muted)">قد تنطبق إعفاءات (مثل التصرف بين الأقارب حسب النص النهائي، أو الحصة العينية في شركة مساهمة بشروط).</div></div>';
+  });
+  $('c4_go').addEventListener('click',function(){
+    var t=num('c4_turn'); if(isNaN(t)){ $('c4_out').innerHTML='<div class="result">أدخل رقم الأعمال.</div>'; return; }
+    var r=smeTax(t);
+    if(!r){ $('c4_out').innerHTML='<div class="result">رقم الأعمال أكبر من 10 ملايين جنيه، النظام المبسط في قانون 152/2020 لا ينطبق (تُطبّق المعاملة العادية بقانون الدخل).</div>'; return; }
+    $('c4_out').innerHTML='<div class="result">'+kv('الشريحة',r.note)+kv('الضريبة السنوية','<span class="big">'+fmt(r.tax)+'</span>')+'<div style="font-size:.85rem;color:var(--muted)">يشترط التسجيل بجهاز تنمية المشروعات وشهادة التصنيف.</div></div>';
+  });
+  $('c5_go').addEventListener('click',function(){
+    var p=num('c5_profit'); if(isNaN(p)){ $('c5_out').innerHTML='<div class="result">أدخل صافي الربح.</div>'; return; }
+    var rate=parseFloat($('c5_listed').value)/100;
+    var tax=p*0.225, after=p-tax, wht=after*rate;
+    $('c5_out').innerHTML='<div class="result">'+kv('ضريبة الشركات 22.5%','<span class="big">'+fmt(tax)+'</span>')+kv('الربح بعد الضريبة',fmt(after))+kv('ضريبة التوزيعات ('+(rate*100)+'%) لو وُزّع كله',fmt(wht))+kv('صافي ما يصل للمساهمين',fmt(after-wht))+'</div>';
+  });
+  $('c6_go').addEventListener('click',function(){
+    var rent=num('c6_rent'); if(isNaN(rent)){ $('c6_out').innerHTML='<div class="result">أدخل القيمة الإيجارية.</div>'; return; }
+    var r=propertyTax(rent,$('c6_type').value);
+    var html = kv('بعد خصم '+Math.round(r.ded*100)+'% مصروفات (الصافي)',fmt(r.net));
+    if(r.exempt){ html += '<div style="margin-top:6px"><b class="big">معفاة</b> (الصافي أقل من 100 ألف جنيه)</div>'; }
+    else { html += kv('الضريبة السنوية (10%)','<span class="big">'+fmt(r.tax)+'</span>');
+      if($('c6_type').value==='main') html += '<div style="font-size:.85rem;color:var(--muted)">لو احتُسبت الضريبة على كامل الصافي بدل الزيادة فقط: '+fmt(r.alt)+' جنيه. المصادر الصحفية اختلفت، راجع اللائحة.</div>'; }
+    $('c6_out').innerHTML='<div class="result">'+html+'</div>';
+  });
+
+
+  /* ربط ?q= */
+  try{
+    var qs = new URLSearchParams(location.search).get('q');
+    if(qs){ $('q').value=qs; ask(qs); }
+    else {
+      $('answer').innerHTML='<div class="card"><h2>اسأل أي سؤال عن الضرائب في مصر</h2><p>اكتب سؤالك في الخانة فوق (بالعامية أو الفصحى)، أو اختار سؤالًا جاهزًا. فيه كمان تبويب للقوانين وحاسبات للمرتبات والقيمة المضافة والعقارات والمشروعات الصغيرة.</p><p style="color:var(--muted);font-size:.9rem">أمثلة: «ضريبة بيع شقة كام؟» · «ازاي بتتحسب ضريبة المرتب؟» · «امتى اقدم اقرار القيمة المضافة؟» · «الغاز الطبيعي ضريبة»</p></div>';
+    }
+  }catch(e){}
+})();
+}
+</script>
+</body>
+</html>
